@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Section from '../components/Section';
 import ExperienceList from '../components/ExperienceList';
 import SocialBar from '../components/SocialBar';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import { profileData, leadershipData, secondaryLeadershipData, rotaractData, academicData, expertiseItems, civicItems } from '../data/content';
 import type { SectionId } from '../types';
 
@@ -15,8 +16,10 @@ import photoDebating from '../assets/Sujal Photo/SujalPhoto_Debating.webp';
 import photoParliament from '../assets/Sujal Photo/SujalPhoto_Parliament.webp';
 import photoLanding from '../assets/Sujal Photo/SujalPhoto_Landing.png';
 import photoRotaract from '../assets/Sujal Photo/Sujal_Rotaract.jpg';
+import photoLandscape from '../assets/Sujal Photo/View_Landscape.jpg';
 
 const Details = () => {
+  useScrollReveal();
   const [activeSection, setActiveSection] = useState<SectionId>('profile');
   const [showMoreLeadership, setShowMoreLeadership] = useState(false);
   const [allExpertiseExpanded, setAllExpertiseExpanded] = useState(false);
@@ -60,8 +63,8 @@ const Details = () => {
           number="01" 
           title={<>The<br /><em>Profile</em></>}
         >
-          <div className="editorial-grid">
-            <div className="hero-text-content">
+          <div className="profile-grid">
+            <div className="profile-content">
               <h2 className="editorial-subtitle" style={{ marginBottom: '1rem' }}>{profileData.greeting}</h2>
               <p className="lead-text" style={{ fontStyle: 'italic', fontSize: '1.8rem', lineHeight: '1.3', marginBottom: '2rem' }}>
                 {profileData.leadText}
@@ -76,40 +79,32 @@ const Details = () => {
               </div>
             </div>
 
-            <div className="hero-image-side" style={{ alignItems: 'flex-start' }}>
-              <div className="hero-image-container" style={{ maxWidth: '100%' }}>
-                <img 
-                  src={photoLanding} 
-                  alt="Sujal - Profile" 
-                  className="profile-portrait"
-                />
-                <div style={{ marginTop: '3rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <a 
-                    href="/cv-collection/Sujal CV ALL.pdf" 
-                    target="_blank" 
-                    className="nav-btn" 
-                    style={{ 
-                      display: 'inline-flex', 
-                      alignItems: 'center', 
-                      gap: '0.8rem', 
-                      padding: '1rem 2rem', 
-                      border: '1px solid #d1d1d1',
-                      fontSize: '0.75rem',
-                      width: '100%',
-                      justifyContent: 'center',
-                      letterSpacing: '0.1em'
-                    }}
-                  >
-                    <Download size={14} strokeWidth={1.5} />
-                    Download Master Resume
-                  </a>
-                </div>
+            <div className="profile-image-container">
+              <img 
+                src={photoLanding} 
+                alt="Sujal - Profile" 
+                className="profile-portrait"
+              />
+              <div style={{ marginTop: '3rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <a 
+                  href="/cv-collection/Sujal CV ALL.pdf" 
+                  target="_blank" 
+                  className="btn-primary" 
+                  style={{ 
+                    padding: '1rem 2rem', 
+                    width: '100%',
+                    letterSpacing: '0.1em'
+                  }}
+                >
+                  <Download size={14} strokeWidth={1.5} style={{ marginRight: '0.8rem' }} />
+                  Download Master Resume
+                </a>
               </div>
             </div>
           </div>
         </Section>
 
-        <section id="leadership" className="section">
+        <section id="leadership" className="section reveal">
           <div className="section-header">
             <div>
               <div className="section-number">02</div>
@@ -134,9 +129,9 @@ const Details = () => {
                   style={{ width: '100%', height: 'auto', border: '1px solid #d1d1d1' }} />
                 <div style={{ marginTop: '2rem', textAlign: 'center' }}>
                   <button 
-                    className="nav-btn" 
+                    className="btn-primary" 
                     onClick={() => setShowMoreLeadership(!showMoreLeadership)}
-                    style={{ padding: '0.6rem 2.5rem', border: '1px solid #d1d1d1', width: '100%', fontSize: '0.75rem' }}
+                    style={{ width: '100%', padding: '0.8rem 2rem' }}
                   >
                     {showMoreLeadership ? 'Show Less' : 'View More Responsibilities'}
                   </button>
@@ -159,8 +154,8 @@ const Details = () => {
               <div style={{ marginTop: '1rem', textAlign: 'center' }}>
                 <button 
                   onClick={() => setAllExpertiseExpanded(!allExpertiseExpanded)}
-                  className="nav-btn"
-                  style={{ padding: '0.4rem 1.5rem', border: '1px solid #d1d1d1', fontSize: '0.65rem' }}
+                  className="btn-primary"
+                  style={{ padding: '0.6rem 1.5rem', fontSize: '0.7rem' }}
                 >
                   {allExpertiseExpanded ? 'Hide Details' : 'In Details'}
                 </button>
@@ -218,8 +213,8 @@ const Details = () => {
                 href="https://ieeexplore.ieee.org/document/11441375" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="nav-btn" 
-                style={{ border: '1px solid #d1d1d1', padding: '0.6rem 1.8rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+                className="btn-primary" 
+                style={{ padding: '0.8rem 1.8rem' }}
               >
                 View on IEEE Xplore
               </a>
@@ -227,8 +222,8 @@ const Details = () => {
                 href="https://www.researchgate.net/publication/399407643_Retinal_Fundus_Disease_Detection_and_Classification_using_ResNet-50" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="nav-btn" 
-                style={{ border: '1px solid #d1d1d1', padding: '0.6rem 1.8rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+                className="btn-primary" 
+                style={{ padding: '0.8rem 1.8rem' }}
               >
                 ResearchGate
               </a>
@@ -250,8 +245,8 @@ const Details = () => {
               <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
                 <button 
                   onClick={() => setAllMunExpanded(!allMunExpanded)}
-                  className="nav-btn"
-                  style={{ padding: '0.5rem 1.5rem', border: '1px solid #d1d1d1' }}
+                  className="btn-primary"
+                  style={{ padding: '0.6rem 1.5rem' }}
                 >
                   {allMunExpanded ? 'Hide Details' : 'In Details'}
                 </button>
@@ -414,8 +409,8 @@ const Details = () => {
               <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
                 <button 
                   onClick={() => setAllCivicExpanded(!allCivicExpanded)}
-                  className="nav-btn"
-                  style={{ padding: '0.5rem 1.8rem', border: '1px solid #d1d1d1' }}
+                  className="btn-primary"
+                  style={{ padding: '0.6rem 1.8rem' }}
                 >
                   {allCivicExpanded ? 'Hide Details' : 'In Details'}
                 </button>
@@ -473,8 +468,8 @@ const Details = () => {
               <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
                 <button
                   onClick={() => setAllAcademicExpanded(!allAcademicExpanded)}
-                  className="nav-btn"
-                  style={{ padding: '0.5rem 1.8rem', border: '1px solid #d1d1d1' }}
+                  className="btn-primary"
+                  style={{ padding: '0.6rem 1.8rem' }}
                 >
                   {allAcademicExpanded ? 'Hide Details' : 'In Details'}
                 </button>
@@ -527,6 +522,20 @@ const Details = () => {
         </Section>
       </main>
 
+      <div style={{ width: '100%', borderTop: '1px solid #d1d1d1', borderBottom: '1px solid #d1d1d1', overflow: 'hidden' }} className="reveal">
+        <img 
+          src={photoLandscape} 
+          alt="Kathmandu Valley" 
+          style={{ 
+            width: '100%', 
+            height: '500px', 
+            objectFit: 'cover', 
+            objectPosition: 'center 40%',
+            display: 'block'
+          }} 
+        />
+      </div>
+
       <footer className="footer">
         <h2 className="footer-brand">Sujal Bikram Thapa</h2>
         <p className="footer-meta">Software Engineer & Creative Strategist • Kathmandu, Nepal • {new Date().getFullYear()}</p>
@@ -534,7 +543,7 @@ const Details = () => {
           <SocialBar size={14} />
         </div>
         <div style={{ marginTop: '2rem' }}>
-          <a href="/" className="nav-btn" style={{ border: '1px solid #d1d1d1', padding: '0.5rem 1.5rem' }}>Back to Home</a>
+          <a href="/" className="btn-primary" style={{ padding: '0.6rem 1.8rem' }}>Back to Home</a>
         </div>
       </footer>
     </div>

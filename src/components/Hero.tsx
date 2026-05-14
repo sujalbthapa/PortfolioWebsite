@@ -21,13 +21,7 @@ const Hero: React.FC = () => {
             </div>
 
             <div style={{ marginTop: '2.5rem' }}>
-              <Link to="/details" className="nav-btn" style={{ 
-                fontSize: '0.8rem', 
-                padding: '1.25rem 3.5rem', 
-                border: '1px solid #d1d1d1',
-                letterSpacing: '2px',
-                display: 'flex',
-                justifyContent: 'center',
+              <Link to="/details" className="btn-primary" style={{ 
                 width: '100%',
                 boxSizing: 'border-box'
               }}>

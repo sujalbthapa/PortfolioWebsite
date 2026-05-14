@@ -1,12 +1,15 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import SocialBar from '../components/SocialBar';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import photoLandscape from '../assets/Sujal Photo/View_Landscape.jpg';
 
 const Home: React.FC = () => {
+  useScrollReveal();
+
   return (
-    <div className="portfolio">
-      <header className="navbar" style={{ position: 'absolute', background: 'transparent', border: 'none' }}>
+    <div className="portfolio reveal">
+      <header className="navbar" style={{ position: 'absolute', background: 'transparent', border: 'none', width: '100%', padding: '2rem clamp(1.5rem, 5vw, 3rem)' }}>
         <div className="nav-brand">
           Sujal <span style={{ opacity: 0.5 }}>Thapa.</span>
         </div>
@@ -25,15 +28,8 @@ const Home: React.FC = () => {
             height: '500px', 
             objectFit: 'cover', 
             objectPosition: 'center 40%',
-            display: 'block',
-            transition: 'transform 0.8s ease, filter 0.5s ease'
+            display: 'block'
           }} 
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'scale(1.05)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'scale(1)';
-          }}
         />
       </div>
 

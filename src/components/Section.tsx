@@ -20,7 +20,7 @@ const Section: React.FC<SectionProps> = ({
   sideContent
 }) => {
   return (
-    <section id={id} className={`section ${className}`}>
+    <section id={id} className={`section reveal ${className}`}>
       <div className={layoutClassName}>
         <div className="section-header">
           <div className="section-number">{number}</div>
