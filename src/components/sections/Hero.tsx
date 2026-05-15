@@ -6,16 +6,6 @@ import heroImage from '../../assets/Sujal Photo/SujalPhoto_Working.webp';
 const Hero: React.FC = () => {
   return (
     <section id="home" className="hero-section">
-      <div className="hero-cli-container">
-        <a 
-          href="https://cli.sujalbthapa.com.np" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="cli-btn"
-        >
-          CLI Mode
-        </a>
-      </div>
       <div className="hero-split">
         <div className="hero-text-side">
           <div className="hero-text-content">
@@ -25,6 +15,12 @@ const Hero: React.FC = () => {
             <p className="lead-text hero-lead">
               I build software, study geopolitics, and lead service projects—all with a nerdy geek's curiosity.
             </p>
+
+            <div className="hero-cta-wrapper" style={{ marginTop: '2rem', marginBottom: '2.5rem' }}>
+              <Link to="/details" className="btn-primary hero-cta-btn">
+                Explore Full Portfolio <em>&rarr;</em>
+              </Link>
+            </div>
 
             <div className="hero-social-wrapper">
               <SocialBar />
@@ -42,11 +38,6 @@ const Hero: React.FC = () => {
                 loading="eager"
                 fetchPriority="high"
               />
-            </div>
-            <div className="hero-cta-wrapper">
-              <Link to="/details" className="btn-primary hero-cta-btn">
-                Explore Full Portfolio <em>&rarr;</em>
-              </Link>
             </div>
           </div>
         </div>

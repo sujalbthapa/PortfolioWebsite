@@ -8,10 +8,20 @@ const Home: React.FC = () => {
   useScrollReveal();
 
   return (
-    <div className="portfolio reveal">
+    <div className="portfolio">
       <header className="navbar home-header" style={{ position: 'absolute', background: 'transparent', border: 'none', width: '100%' }}>
         <div className="nav-brand">
           Sujal <span style={{ opacity: 0.5 }}>Thapa.</span>
+        </div>
+        <div className="nav-actions">
+          <a 
+            href="https://cli.sujalbthapa.com.np" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cli-btn"
+          >
+            CLI MODE
+          </a>
         </div>
       </header>
 

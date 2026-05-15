@@ -73,15 +73,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
         </div>
 
         <div className="nav-actions">
-          <a 
-            href="https://cli.sujalbthapa.com.np" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="cli-btn"
-          >
-            CLI Mode
-          </a>
-
           {/* Burger Button */}
           <button 
             className="burger-btn" 
@@ -90,6 +81,15 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
           >
             {isMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
           </button>
+
+          <a 
+            href="https://cli.sujalbthapa.com.np" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="cli-btn"
+          >
+            CLI MODE
+          </a>
         </div>
       </nav>
 
@@ -122,7 +122,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
             style={{ marginTop: '1rem' }}
           >
             <span className="link-number">#</span>
-            <span className="link-label" style={{ color: 'var(--text-ink)', fontWeight: 700 }}>CLI Mode</span>
+            <span className="link-label" style={{ color: 'var(--text-ink)', fontWeight: 700 }}>CLI MODE</span>
           </a>
         </div>
         <div className="sidebar-footer">
