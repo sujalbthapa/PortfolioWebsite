@@ -29,24 +29,25 @@ const Hero: React.FC = () => {
             <div className="hero-social-wrapper">
               <SocialBar />
             </div>
+          </div>
+        </div>
 
+        <div className="hero-image-side">
+          <div className="hero-image-container-wrapper">
+            <div className="hero-image-container">
+              <img 
+                src={heroImage} 
+                alt="Sujal Bikram Thapa" 
+                className="hero-main-image"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
             <div className="hero-cta-wrapper">
               <Link to="/details" className="btn-primary hero-cta-btn">
                 Explore Full Portfolio <em>&rarr;</em>
               </Link>
             </div>
-          </div>
-        </div>
-
-        <div className="hero-image-side">
-          <div className="hero-image-container">
-            <img 
-              src={heroImage} 
-              alt="Sujal Bikram Thapa" 
-              className="hero-main-image"
-              loading="eager"
-              fetchPriority="high"
-            />
           </div>
         </div>
       </div>
