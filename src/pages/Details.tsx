@@ -14,7 +14,7 @@ import photoTalking from '../assets/Sujal Photo/SujalPhoto_Talking.jpeg';
 import photoUN from '../assets/Sujal Photo/SujalPhoto_UN.webp';
 import photoDebating from '../assets/Sujal Photo/SujalPhoto_Debating.webp';
 import photoParliament from '../assets/Sujal Photo/SujalPhoto_Parliament.webp';
-import photoLanding from '../assets/Sujal Photo/SujalPhoto_Landing.png';
+import photoLanding from '../assets/Sujal Photo/SujalPhoto_Landing.webp';
 import photoRotaract from '../assets/Sujal Photo/Sujal_Rotaract.jpg';
 import photoLandscape from '../assets/Sujal Photo/View_Landscape.jpg';
 
@@ -84,6 +84,7 @@ const Details = () => {
                 src={photoLanding} 
                 alt="Sujal - Profile" 
                 className="profile-portrait"
+                loading="eager"
               />
               <div style={{ marginTop: '3rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <a 
@@ -163,7 +164,7 @@ const Details = () => {
             </div>
           }
         >
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          <div className="responsive-grid-2">
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {expertiseItems.slice(0, 4).map(item => (
                 <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
@@ -256,7 +257,7 @@ const Details = () => {
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', marginTop: '2rem' }}>
             
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', borderBottom: '1px solid #d1d1d1', paddingBottom: '1.5rem' }}>
+            <div className="responsive-grid-3" style={{ borderBottom: '1px solid #d1d1d1', paddingBottom: '1.5rem' }}>
               <div>
                 <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', lineHeight: '1' }}>60+</div>
                 <div className="item-meta" style={{ marginTop: '0.5rem' }}>Conferences</div>
@@ -418,7 +419,7 @@ const Details = () => {
             </div>
           }
         >
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          <div className="responsive-grid-2">
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {civicItems.slice(0, 4).map(item => (
                 <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
@@ -477,7 +478,7 @@ const Details = () => {
             </div>
           }
         >
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem' }}>
+          <div className="responsive-grid-2" style={{ gap: '3rem' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <div className="article-category" style={{ fontSize: '0.8rem', color: 'var(--text-gray)', letterSpacing: '2px', textTransform: 'uppercase', borderBottom: '1px solid #eee', paddingBottom: '0.75rem' }}>Higher Education</div>
               

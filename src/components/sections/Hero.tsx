@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SocialBar from '../ui/SocialBar';
-import heroImage from '../../assets/Sujal Photo/SujalPhoto_Working.png';
+import heroImage from '../../assets/Sujal Photo/SujalPhoto_Working.webp';
 
 const Hero: React.FC = () => {
   return (
@@ -16,15 +16,12 @@ const Hero: React.FC = () => {
               I build software, study geopolitics, and lead service projects—all with a nerdy geek's curiosity.
             </p>
 
-            <div style={{ marginTop: '2.1rem' }}>
+            <div className="hero-social-container">
               <SocialBar />
             </div>
 
-            <div style={{ marginTop: '2.5rem' }}>
-              <Link to="/details" className="btn-primary" style={{ 
-                width: '100%',
-                boxSizing: 'border-box'
-              }}>
+            <div className="hero-cta-container">
+              <Link to="/details" className="btn-primary hero-btn">
                 Explore Full Portfolio <em>&rarr;</em>
               </Link>
             </div>
@@ -37,6 +34,8 @@ const Hero: React.FC = () => {
               src={heroImage} 
               alt="Sujal Bikram Thapa" 
               className="hero-main-image"
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
         </div>
