@@ -72,14 +72,25 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
           ))}
         </div>
 
-        {/* Burger Button */}
-        <button 
-          className="burger-btn" 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        >
-          {isMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
-        </button>
+        <div className="nav-actions">
+          <a 
+            href="https://cli.sujalbthapa.com.np" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="cli-btn"
+          >
+            CLI Mode
+          </a>
+
+          {/* Burger Button */}
+          <button 
+            className="burger-btn" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {isMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Sidebar Overlay */}
@@ -103,6 +114,16 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
               <span className="link-label">{link.label}</span>
             </button>
           ))}
+          <a 
+            href="https://cli.sujalbthapa.com.np" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="sidebar-link"
+            style={{ marginTop: '1rem' }}
+          >
+            <span className="link-number">#</span>
+            <span className="link-label" style={{ color: 'var(--text-ink)', fontWeight: 700 }}>CLI Mode</span>
+          </a>
         </div>
         <div className="sidebar-footer">
           <p>© {new Date().getFullYear()} Sujal Bikram Thapa</p>

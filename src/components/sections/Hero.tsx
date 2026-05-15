@@ -6,6 +6,16 @@ import heroImage from '../../assets/Sujal Photo/SujalPhoto_Working.webp';
 const Hero: React.FC = () => {
   return (
     <section id="home" className="hero-section">
+      <div className="hero-cli-container">
+        <a 
+          href="https://cli.sujalbthapa.com.np" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="cli-btn"
+        >
+          CLI Mode
+        </a>
+      </div>
       <div className="hero-split">
         <div className="hero-text-side">
           <div className="hero-text-content">

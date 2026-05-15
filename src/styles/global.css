@@ -201,6 +201,46 @@ a:hover {
   }
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cli-btn {
+  background-color: var(--text-ink);
+  color: var(--bg-paper);
+  padding: 0.6rem 1.25rem;
+  border: 1px solid var(--text-ink);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.cli-btn:hover {
+  background-color: transparent;
+  color: var(--text-ink);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .cli-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.65rem;
+  }
+  .nav-actions {
+    gap: 0.75rem;
+  }
+}
+
 .nav-btn {
   background: none;
   border: none;
@@ -440,6 +480,7 @@ a:hover {
 
 /* Hero Section */
 .hero-section {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -534,7 +575,27 @@ a:hover {
   justify-content: center;
   gap: 1rem;
   margin-top: 3rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Allow horizontal scroll if absolutely necessary on tiny screens */
+  padding-bottom: 0.5rem; /* Space for potential scrollbar */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.social-bar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.hero-cli-container {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .hero-cli-container {
+    display: none; /* Hide in hero on mobile since it's already in the fixed navbar actions */
+  }
 }
 
 .icon-link {
