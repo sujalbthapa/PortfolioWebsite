@@ -9,7 +9,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="portfolio reveal">
-      <header className="navbar" style={{ position: 'absolute', background: 'transparent', border: 'none', width: '100%' }}>
+      <header className="navbar home-header" style={{ position: 'absolute', background: 'transparent', border: 'none', width: '100%' }}>
         <div className="nav-brand">
           Sujal <span style={{ opacity: 0.5 }}>Thapa.</span>
         </div>
@@ -23,7 +23,7 @@ const Home: React.FC = () => {
         <img 
           src={photoLandscape} 
           alt="Kathmandu Valley" 
-          className="responsive-landscape-image"
+          className="home-landscape-image"
           style={{ 
             width: '100%', 
             objectFit: 'cover', 

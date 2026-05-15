@@ -14,7 +14,6 @@ const SocialBar: React.FC<SocialBarProps> = ({ size = 16, className = "social-ba
     { href: "https://github.com/sujalbthapa", title: "GitHub", icon: <i className='bx bxl-github' style={iconStyle}></i> },
     { href: "https://linkedin.com/in/sujalbthapa", title: "LinkedIn", icon: <i className='bx bxl-linkedin' style={iconStyle}></i> },
     { href: "https://www.instagram.com/sujalbthapa/", title: "Instagram", icon: <i className='bx bxl-instagram' style={iconStyle}></i> },
-    { href: "https://twitter.com/sujalbikramth", title: "Twitter", icon: <i className='bx bxl-twitter' style={iconStyle}></i> },
     { href: "https://www.facebook.com/sujalbikramthapa", title: "Facebook", icon: <i className='bx bxl-facebook' style={iconStyle}></i> },
     { href: "https://kawfibeans.blogspot.com", title: "Blogger", icon: <BookOpen size={size} strokeWidth={1.5} /> },
   ];

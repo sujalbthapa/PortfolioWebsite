@@ -12,16 +12,16 @@ const Hero: React.FC = () => {
             <h2 className="editorial-subtitle">Hello, I'm</h2>
             <h1 className="editorial-title">Sujal Bikram<br /><em>Thapa</em><span className="dot">.</span></h1>
             
-            <p className="lead-text" style={{ fontStyle: 'italic', marginBottom: '1.25rem' }}>
+            <p className="lead-text hero-lead">
               I build software, study geopolitics, and lead service projects—all with a nerdy geek's curiosity.
             </p>
 
-            <div className="hero-social-container">
+            <div className="hero-social-wrapper">
               <SocialBar />
             </div>
 
-            <div className="hero-cta-container">
-              <Link to="/details" className="btn-primary hero-btn">
+            <div className="hero-cta-wrapper">
+              <Link to="/details" className="btn-primary hero-cta-btn">
                 Explore Full Portfolio <em>&rarr;</em>
               </Link>
             </div>
