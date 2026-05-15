@@ -4,7 +4,6 @@ import Navbar from '../components/layout/Navbar';
 import Section from '../components/layout/Section';
 import Footer from '../components/layout/Footer';
 import ExperienceList from '../components/sections/ExperienceList';
-import SocialBar from '../components/ui/SocialBar';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { profileData, leadershipData, secondaryLeadershipData, rotaractData, academicData, expertiseItems, civicItems } from '../data/content';
 import type { SectionId } from '../types';
