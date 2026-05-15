@@ -1,5 +1,5 @@
 import React from 'react';
-import type { ExperienceItem } from '../types';
+import type { ExperienceItem } from '../../types';
 
 interface ExperienceListProps {
   items: ExperienceItem[];

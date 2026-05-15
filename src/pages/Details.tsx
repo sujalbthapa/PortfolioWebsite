@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Download } from 'lucide-react';
-import Navbar from '../components/Navbar';
-import Section from '../components/Section';
-import ExperienceList from '../components/ExperienceList';
-import SocialBar from '../components/SocialBar';
+import Navbar from '../components/layout/Navbar';
+import Section from '../components/layout/Section';
+import Footer from '../components/layout/Footer';
+import ExperienceList from '../components/sections/ExperienceList';
+import SocialBar from '../components/ui/SocialBar';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { profileData, leadershipData, secondaryLeadershipData, rotaractData, academicData, expertiseItems, civicItems } from '../data/content';
 import type { SectionId } from '../types';
@@ -536,16 +537,7 @@ const Details = () => {
         />
       </div>
 
-      <footer className="footer">
-        <h2 className="footer-brand">Sujal Bikram Thapa</h2>
-        <p className="footer-meta">Software Engineer & Creative Strategist • Kathmandu, Nepal • {new Date().getFullYear()}</p>
-        <div style={{ marginTop: '2rem', marginBottom: '3rem' }}>
-          <SocialBar size={14} />
-        </div>
-        <div style={{ marginTop: '2rem' }}>
-          <a href="/" className="btn-primary" style={{ padding: '0.6rem 1.8rem' }}>Back to Home</a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

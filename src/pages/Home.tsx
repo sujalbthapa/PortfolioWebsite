@@ -1,6 +1,6 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import SocialBar from '../components/SocialBar';
+import Hero from '../components/sections/Hero';
+import Footer from '../components/layout/Footer';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import photoLandscape from '../assets/Sujal Photo/View_Landscape.jpg';
 
@@ -33,13 +33,7 @@ const Home: React.FC = () => {
         />
       </div>
 
-      <footer className="footer">
-        <h2 className="footer-brand">Sujal Bikram Thapa</h2>
-        <p className="footer-meta">Software Engineer & Creative Strategist • Kathmandu, Nepal • {new Date().getFullYear()}</p>
-        <div style={{ marginTop: '2rem' }}>
-          <SocialBar size={14} />
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

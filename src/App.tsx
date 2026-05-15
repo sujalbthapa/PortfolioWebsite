@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Details from './pages/Details';
-import ScrollToTop from './components/ScrollToTop';
-import ScrollProgress from './components/ScrollProgress';
-import './App.css';
+import ScrollToTop from './components/layout/ScrollToTop';
+import ScrollProgress from './components/layout/ScrollProgress';
+import './styles/global.css';
 
 function App() {
   return (

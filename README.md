@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# Sujal Bikram Thapa - Professional Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-end, editorial-style professional portfolio built with React, TypeScript, and Vite. This project showcases my experience in software engineering, geopolitics, and design with a focus on elegant interactivity and clean aesthetics.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework:** React 18
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** Vanilla CSS (Custom properties, clamp for responsiveness)
+- **Icons:** Lucide React, Boxicons
+- **Routing:** React Router DOM
 
-## React Compiler
+## 📂 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Following industry standards for React development:
 
-## Expanding the ESLint configuration
+- `src/assets/`: Static assets including portrait photos and landscape imagery.
+- `src/components/layout/`: Core page structure components (Navbar, Footer, Section).
+- `src/components/ui/`: Reusable, generic UI elements (SocialBar, ScrollProgress).
+- `src/components/sections/`: Feature-specific sections used within pages.
+- `src/data/`: Centralized content management for easy updates.
+- `src/hooks/`: Custom React hooks for shared logic (e.g., scroll-reveal animations).
+- `src/pages/`: Main entry points for application routes.
+- `src/styles/`: Global styles, reset, and theme configurations.
+- `src/types/`: Centralized TypeScript definitions.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Development
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Run Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+## ✨ Key Features
+
+- **Editorial Aesthetic:** Large typography, serif accents, and generous whitespace.
+- **Scroll-Driven Animations:** Content reveals gracefully as the user navigates.
+- **Responsive Zoom:** High-impact imagery that adapts to device height.
+- **Interactive Experience:** Subtle hover states and tactile feedback on all key elements.
+
+---
+Created by Sujal Bikram Thapa.

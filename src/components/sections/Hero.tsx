@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SocialBar from './SocialBar';
-import heroImage from '../assets/Sujal Photo/SujalPhoto_Working.png';
+import SocialBar from '../ui/SocialBar';
+import heroImage from '../../assets/Sujal Photo/SujalPhoto_Working.png';
 
 const Hero: React.FC = () => {
   return (
