@@ -2,6 +2,8 @@
 
 A professional portfolio website for Sujal Thapa, built with modern web technologies.
 
+**Live Site:** [sujalbthapa.com.np](https://sujalbthapa.com.np)
+
 ## 🚀 Technologies Used
 
 - **Framework:** [React](https://reactjs.org/)
