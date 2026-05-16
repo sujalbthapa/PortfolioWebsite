@@ -164,10 +164,10 @@ const Details = () => {
             </div>
           }
         >
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {expertiseItems.slice(0, 4).map(item => (
-                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
                   <div className="article-category">{item.category}</div>
                   <h4 className="article-title" style={{ fontSize: '1.25rem', marginBottom: '0.5rem', lineHeight: '1.3' }}>{item.title}</h4>
                   <p className="body-text" style={{ color: allExpertiseExpanded ? 'var(--text-gray)' : 'var(--text-charcoal)' }}>
@@ -180,9 +180,9 @@ const Details = () => {
               ))}
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {expertiseItems.slice(4).map(item => (
-                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
                   <div className="article-category">{item.category}</div>
                   <h4 className="article-title" style={{ fontSize: '1.25rem', marginBottom: '0.5rem', lineHeight: '1.3' }}>{item.title}</h4>
                   <p className="body-text" style={{ color: allExpertiseExpanded ? 'var(--text-gray)' : 'var(--text-charcoal)' }}>
@@ -255,7 +255,7 @@ const Details = () => {
             </div>
           }
         >
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', marginTop: '2rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', marginTop: '2rem' }}>
             
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', borderBottom: '1px solid #d1d1d1', paddingBottom: '1.5rem' }}>
               <div>
@@ -272,8 +272,8 @@ const Details = () => {
               </div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '0.75rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
                 <div className="item-meta" style={{ marginBottom: '0.2rem' }}>2021 – Present</div>
                 <div className="article-category" style={{ margin: '0 0 0.2rem 0' }}>Leadership</div>
                 <h4 className="article-title" style={{ fontSize: '1.4rem', marginBottom: '0.25rem', lineHeight: '1.3', fontFamily: 'var(--font-serif)' }}>Committee Leadership (The Dais)</h4>
@@ -302,7 +302,7 @@ const Details = () => {
                 )}
               </article>
 
-              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '0.75rem' }}>
+              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
                 <div className="article-category" style={{ margin: '0.5rem 0 0.2rem 0' }}>Press & Media</div>
                 <h4 className="article-title" style={{ fontSize: '1.4rem', marginBottom: '0.25rem', lineHeight: '1.3', fontFamily: 'var(--font-serif)' }}>International Press Corps (IPC)</h4>
                 <p className="body-text" style={{ color: allMunExpanded ? 'var(--text-gray)' : 'var(--text-charcoal)' }}>
@@ -322,7 +322,7 @@ const Details = () => {
                 )}
               </article>
 
-              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '0.75rem' }}>
+              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
                 <div className="article-category" style={{ margin: '0.5rem 0 0.2rem 0' }}>Operations</div>
                 <h4 className="article-title" style={{ fontSize: '1.4rem', marginBottom: '0.25rem', lineHeight: '1.3', fontFamily: 'var(--font-serif)' }}>Secretariat & Operations</h4>
                 <p className="body-text" style={{ color: allMunExpanded ? 'var(--text-gray)' : 'var(--text-charcoal)' }}>
@@ -419,10 +419,10 @@ const Details = () => {
             </div>
           }
         >
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {civicItems.slice(0, 4).map(item => (
-                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
                   <div className="item-meta" style={{ marginBottom: '0.2rem' }}>{item.date}</div>
                   <div className="article-category" style={{ margin: '0 0 0.2rem 0' }}>{item.category}</div>
                   <h4 className="article-title" style={{ fontSize: '1.4rem', marginBottom: '0.25rem', lineHeight: '1.3' }}>{item.title}</h4>
@@ -437,9 +437,9 @@ const Details = () => {
               ))}
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {civicItems.slice(4).map(item => (
-                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
                   <div className="item-meta" style={{ marginBottom: '0.2rem' }}>{item.date}</div>
                   <div className="article-category" style={{ margin: '0 0 0.2rem 0' }}>{item.category}</div>
                   <h4 className="article-title" style={{ fontSize: '1.4rem', marginBottom: '0.25rem', lineHeight: '1.3' }}>{item.title}</h4>
