@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       <div className="hero-split">
         <div className="hero-text-side">
           <div className="hero-text-content">
-            <h2 className="editorial-subtitle">Hello, I'm</h2>
+            <h2 className="editorial-subtitle">Hello! I'm</h2>
             <h1 className="editorial-title">Sujal Bikram<br /><em>Thapa</em><span className="dot">.</span></h1>
             
             <p className="lead-text hero-lead">
