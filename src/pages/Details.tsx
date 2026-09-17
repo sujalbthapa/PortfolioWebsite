@@ -29,7 +29,6 @@ import photoDebating from '../assets/Sujal Photo/SujalPhoto_Debating.webp';
 import photoParliament from '../assets/Sujal Photo/SujalPhoto_Parliament.webp';
 import photoLanding from '../assets/Sujal Photo/SujalPhoto_Landing.webp';
 import photoRotaract from '../assets/Sujal Photo/Sujal_Rotaract.jpg';
-import photoWorking from '../assets/Sujal Photo/SujalPhoto_Working.webp';
 import photoLandscape from '../assets/Sujal Photo/View_Landscape.jpg';
 
 const sectionIds: SectionId[] = [
@@ -585,22 +584,24 @@ const Details = () => {
           title={<>Independent<br /><em>Ventures</em></>}
           reversed={false}
           sideContent={
-            <div className="side-image-small">
-              <img 
-                src={photoWorking} 
-                alt="Sujal - Independent Ventures" 
-              />
-              <div style={{ marginTop: '1rem', textAlign: 'center' }}>
-                <a 
-                  href="https://lunarchronicles.com.np" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-primary" 
-                  style={{ width: '100%', padding: '0.6rem 1.25rem', fontSize: '0.72rem', display: 'inline-flex', justifyContent: 'center' }}
-                >
-                  Visit Venture &rarr;
-                </a>
-              </div>
+            <div>
+              <a 
+                href="https://lunarchronicles.com.np" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary" 
+                style={{ 
+                  width: '100%', 
+                  padding: '0.75rem 1.5rem', 
+                  fontSize: '0.75rem', 
+                  display: 'inline-flex', 
+                  justifyContent: 'center',
+                  letterSpacing: '0.08em',
+                  textAlign: 'center'
+                }}
+              >
+                Visit Venture &rarr;
+              </a>
             </div>
           }
         >
