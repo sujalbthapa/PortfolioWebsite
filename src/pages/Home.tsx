@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/sections/Hero';
 import Footer from '../components/layout/Footer';
 import { useScrollReveal } from '../hooks/useScrollReveal';
@@ -14,14 +15,19 @@ const Home: React.FC = () => {
           Sujal <span style={{ opacity: 0.5 }}>Thapa.</span>
         </div>
         <div className="nav-actions">
-          <a 
-            href="https://cli.sujalbthapa.com.np" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="cli-btn"
+          <Link 
+            to="/details" 
+            className="nav-btn"
+            style={{ 
+              textTransform: 'uppercase', 
+              fontSize: '0.75rem', 
+              letterSpacing: '0.15em', 
+              fontWeight: 600,
+              padding: '0.5rem 0'
+            }}
           >
-            CLI MODE
-          </a>
+            Explore Portfolio &rarr;
+          </Link>
         </div>
       </header>
 

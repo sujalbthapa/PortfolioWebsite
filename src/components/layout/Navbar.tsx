@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
     { id: 'skills', label: 'Toolkit' },
     { id: 'expertise', label: 'Expertise' },
     { id: 'research', label: 'Research' },
-    { id: 'mun', label: 'MUN' },
+    { id: 'mun', label: 'Diplomacy' },
     { id: 'rotaract', label: 'Rotaract' },
     { id: 'civic', label: 'Civic' },
     { id: 'academic', label: 'Academic' },
@@ -84,12 +84,23 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
           </button>
 
           <a 
-            href="https://cli.sujalbthapa.com.np" 
+            href="/cv-collection/Sujal CV ALL.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="cli-btn"
+            className="desktop-only"
+            style={{ 
+              fontSize: '0.72rem', 
+              letterSpacing: '0.12em', 
+              textTransform: 'uppercase', 
+              fontWeight: 600,
+              color: 'var(--text-ink)',
+              textDecoration: 'none',
+              borderBottom: '1px solid var(--text-ink)',
+              paddingBottom: '2px',
+              whiteSpace: 'nowrap'
+            }}
           >
-            CLI MODE
+            CV (PDF) &darr;
           </a>
         </div>
       </nav>
@@ -116,14 +127,14 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
             </button>
           ))}
           <a 
-            href="https://cli.sujalbthapa.com.np" 
+            href="/cv-collection/Sujal CV ALL.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="sidebar-link"
             style={{ marginTop: '1rem' }}
           >
-            <span className="link-number">#</span>
-            <span className="link-label" style={{ color: 'var(--text-ink)', fontWeight: 700 }}>CLI MODE</span>
+            <span className="link-number">&darr;</span>
+            <span className="link-label" style={{ color: 'var(--text-ink)', fontWeight: 700 }}>Download CV (PDF)</span>
           </a>
         </div>
         <div className="sidebar-footer">
