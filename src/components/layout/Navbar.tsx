@@ -15,15 +15,15 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
 
   const links: { id: SectionId; label: string }[] = [
     { id: 'profile', label: 'Profile' },
-    { id: 'leadership', label: 'Experience' },
-    { id: 'skills', label: 'Toolkit' },
-    { id: 'expertise', label: 'Expertise' },
-    { id: 'research', label: 'Research' },
-    { id: 'ventures', label: 'Ventures' },
-    { id: 'mun', label: 'Diplomacy' },
-    { id: 'rotaract', label: 'Rotaract' },
-    { id: 'civic', label: 'Civic' },
     { id: 'academic', label: 'Academic' },
+    { id: 'leadership', label: 'Experience' },
+    { id: 'research', label: 'Research' },
+    { id: 'expertise', label: 'Expertise' },
+    { id: 'skills', label: 'Toolkit' },
+    { id: 'rotaract', label: 'Rotaract' },
+    { id: 'mun', label: 'Diplomacy' },
+    { id: 'civic', label: 'Civic' },
+    { id: 'ventures', label: 'Ventures' },
   ];
 
   // Close menu when clicking a link
