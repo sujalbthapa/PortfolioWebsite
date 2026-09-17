@@ -27,14 +27,6 @@ export const professionalExperienceData: ExperienceItem[] = [
       "Managed end-to-end web development lifecycle for 3 major events (SFD 2024, Noskathon Lite, SFD 2025); coordinated distributed contributor teams via GitHub workflows.",
       "Engineered responsive event platforms and directed digital visual branding across promotional touchpoints."
     ]
-  },
-  {
-    role: "Web Design & Development Lead",
-    company: "NCIT Tech Fest",
-    date: "2024",
-    desc: [
-      "Ran the design and web workflow end to end for NCIT's annual tech festival, producing event branding, participant onboarding interfaces, and promotional digital assets."
-    ]
   }
 ];
 
@@ -81,7 +73,16 @@ export const diplomacyLeadershipData: ExperienceItem[] = [
   }
 ];
 
-export const secondaryLeadershipData: ExperienceItem[] = [];
+export const secondaryLeadershipData: ExperienceItem[] = [
+  {
+    role: "Web Design & Development Lead",
+    company: "NCIT Tech Fest",
+    date: "2024",
+    desc: [
+      "Ran the design and web workflow end to end for NCIT's annual tech festival, producing event branding, participant onboarding interfaces, and promotional digital assets."
+    ]
+  }
+];
 
 export const academicData: ExperienceItem[] = [
   {

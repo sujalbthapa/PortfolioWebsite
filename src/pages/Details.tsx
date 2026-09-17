@@ -10,6 +10,7 @@ import { useScrollSpy } from '../hooks/useScrollSpy';
 import { 
   profileData, 
   professionalExperienceData,
+  secondaryLeadershipData,
   venturesData,
   diplomacyLeadershipData,
   rotaractData, 
@@ -33,10 +34,10 @@ import photoLandscape from '../assets/Sujal Photo/View_Landscape.jpg';
 const sectionIds: SectionId[] = [
   'profile',
   'leadership',
-  'ventures',
   'skills',
   'expertise',
   'research',
+  'ventures',
   'mun',
   'rotaract',
   'civic',
@@ -46,6 +47,7 @@ const sectionIds: SectionId[] = [
 const Details = () => {
   useScrollReveal();
   const activeSection = useScrollSpy(sectionIds, 'profile');
+  const [showMoreLeadership, setShowMoreLeadership] = useState(false);
   const [allExpertiseExpanded, setAllExpertiseExpanded] = useState(false);
   const [allMunExpanded, setAllMunExpanded] = useState(false);
   const [allCivicExpanded, setAllCivicExpanded] = useState(false);
@@ -56,6 +58,7 @@ const Details = () => {
     const handleBeforeMatch = (e: Event) => {
       const target = e.target as HTMLElement | null;
       if (!target) return;
+      if (target.closest('#leadership')) setShowMoreLeadership(true);
       if (target.closest('#expertise')) setAllExpertiseExpanded(true);
       if (target.closest('#mun')) setAllMunExpanded(true);
       if (target.closest('#civic')) setAllCivicExpanded(true);
@@ -127,75 +130,39 @@ const Details = () => {
           </div>
         </Section>
 
-        <section id="leadership" className="section reveal">
-          <div className="section-header">
-            <div>
-              <div className="section-number">02</div>
-              <h3 className="section-title">Professional<br /><em>Experience</em></h3>
-            </div>
-          </div>
-          
-          <div className="leadership-layout">
-            <div>
-              <ExperienceList items={professionalExperienceData} />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              <div>
-                <img 
-                  src={photoParliament} 
-                  alt="Sujal - Engineering & Leadership" 
-                  style={{ width: '100%', height: 'auto', border: '1px solid #d1d1d1' }} />
-              </div>
-            </div>
-          </div>
-        </section>
-
         <Section 
-          id="ventures" 
-          number="03" 
-          title={<>Independent<br /><em>Ventures</em></>}
+          id="leadership" 
+          number="02" 
+          title={<>Professional<br /><em>Experience</em></>}
           sideContent={
             <div className="side-image-small">
-              <div style={{ border: '1px solid #d1d1d1', padding: '1.5rem', background: '#fff', boxSizing: 'border-box' }}>
-                <div className="item-meta" style={{ marginBottom: '0.4rem', fontSize: '0.75rem' }}>Enterprise</div>
-                <h5 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.35rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>Lunar Chronicles Ltd.</h5>
-                <p className="item-subtitle" style={{ fontSize: '0.82rem', marginBottom: '1rem', textTransform: 'none', lineHeight: '1.5' }}>
-                  Media, Strategic Healthcare Dialogues & Digital Communication
-                </p>
-                <a 
-                  href="https://lunarchronicles.com.np" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+              <img 
+                src={photoParliament} 
+                alt="Sujal - Engineering & Leadership" 
+                style={{ width: '100%', height: 'auto', aspectRatio: '4/5', objectFit: 'cover', border: '1px solid #d1d1d1' }} />
+              <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+                <button 
                   className="btn-primary" 
-                  style={{ padding: '0.55rem 1rem', width: '100%', textAlign: 'center', display: 'inline-block', boxSizing: 'border-box', fontSize: '0.72rem' }}
+                  onClick={() => setShowMoreLeadership(!showMoreLeadership)}
+                  style={{ width: '100%', padding: '0.6rem 1.25rem', fontSize: '0.72rem' }}
                 >
-                  Visit Venture &rarr;
-                </a>
+                  {showMoreLeadership ? 'Show Less' : 'Additional Roles (1)'}
+                </button>
               </div>
             </div>
           }
         >
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.75rem' }}>
-              <div className="item-meta" style={{ marginBottom: '0.6rem' }}>{venturesData[0].date}</div>
-              <h4 className="article-title" style={{ fontSize: '2rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>
-                {venturesData[0].company}
-              </h4>
-              <p className="item-subtitle" style={{ fontSize: '1rem', marginBottom: '1rem', textTransform: 'none', color: 'var(--text-ink)', fontWeight: 600 }}>
-                {venturesData[0].role}
-              </p>
-              <ul className="bullet-list" style={{ marginTop: '0.5rem' }}>
-                {venturesData[0].desc.map((d, dIdx) => (
-                  <li key={dIdx} className="body-text" style={{ fontSize: '0.98rem', lineHeight: '1.65' }}>{d}</li>
-                ))}
-              </ul>
-            </article>
+          <div>
+            <ExperienceList items={professionalExperienceData} />
+            <div hidden={!showMoreLeadership ? ('until-found' as unknown as boolean) : undefined} style={{ marginTop: '0.5rem' }}>
+              <ExperienceList items={secondaryLeadershipData} />
+            </div>
           </div>
         </Section>
 
         <Section 
           id="skills" 
-          number="04" 
+          number="03" 
           title={<>Technical<br /><em>Toolkit</em></>}
         >
           <SkillsMatrix categories={skillsData} />
@@ -203,7 +170,7 @@ const Details = () => {
 
         <Section 
           id="expertise" 
-          number="05" 
+          number="04" 
           title={<>Domains of<br /><em>Expertise</em></>}
           sideContent={
             <div className="side-image-small">
@@ -258,23 +225,23 @@ const Details = () => {
 
         <Section 
           id="research" 
-          number="06" 
+          number="05" 
           title={<>Research &<br /><em>Publications</em></>}
         >
           <article className="article-card" style={{ marginTop: '0.75rem' }}>
             <div className="article-category">IEEE Conference Paper</div>
-            <h4 className="article-title" style={{ fontSize: '1.75rem', marginBottom: '0.6rem', lineHeight: '1.3' }}>Retinal Fundus Disease Detection and Classification using ResNet-50</h4>
-            <p className="item-subtitle" style={{ marginBottom: '1rem' }}>IEEE ICISCT 2025 // DOI: 10.1109/ICISCT68600.2025.11441375</p>
+            <h4 className="article-title" style={{ fontSize: '1.5rem', marginBottom: '0.5rem', lineHeight: '1.3' }}>Retinal Fundus Disease Detection and Classification using ResNet-50</h4>
+            <p className="item-subtitle" style={{ marginBottom: '0.85rem' }}>IEEE ICISCT 2025 // DOI: 10.1109/ICISCT68600.2025.11441375</p>
             <p className="body-text" style={{ maxWidth: '800px' }}>
               A deep learning system utilizing the ResNet-50 architecture for multi-label retinal disease classification, aimed at early diagnostic support for ocular conditions. Published in the proceedings of the 2025 International Conference on Information Science and Communications Technologies.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '1.75rem' }}>
+            <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem' }}>
               <a 
                 href="https://ieeexplore.ieee.org/document/11441375" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn-primary" 
-                style={{ padding: '0.8rem 1.8rem' }}
+                style={{ padding: '0.65rem 1.5rem', fontSize: '0.72rem' }}
               >
                 View on IEEE Xplore
               </a>
@@ -283,12 +250,55 @@ const Details = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn-primary" 
-                style={{ padding: '0.8rem 1.8rem' }}
+                style={{ padding: '0.65rem 1.5rem', fontSize: '0.72rem' }}
               >
                 ResearchGate
               </a>
             </div>
           </article>
+        </Section>
+
+        <Section 
+          id="ventures" 
+          number="06" 
+          title={<>Independent<br /><em>Ventures</em></>}
+          sideContent={
+            <div className="side-image-small">
+              <div style={{ border: '1px solid #d1d1d1', padding: '1.25rem', background: '#fff', boxSizing: 'border-box' }}>
+                <div className="item-meta" style={{ marginBottom: '0.4rem', fontSize: '0.72rem' }}>Enterprise</div>
+                <h5 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>Lunar Chronicles Ltd.</h5>
+                <p className="item-subtitle" style={{ fontSize: '0.8rem', marginBottom: '1rem', textTransform: 'none', lineHeight: '1.4' }}>
+                  Media, Strategic Healthcare Dialogues & Digital Communication
+                </p>
+                <a 
+                  href="https://lunarchronicles.com.np" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-primary" 
+                  style={{ padding: '0.55rem 1rem', width: '100%', textAlign: 'center', display: 'inline-block', boxSizing: 'border-box', fontSize: '0.72rem' }}
+                >
+                  Visit Venture &rarr;
+                </a>
+              </div>
+            </div>
+          }
+        >
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
+              <div className="item-meta" style={{ marginBottom: '0.5rem' }}>{venturesData[0].date}</div>
+              <h4 className="article-title" style={{ fontSize: '1.75rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>
+                {venturesData[0].company}
+              </h4>
+              <p className="item-subtitle" style={{ fontSize: '0.95rem', marginBottom: '0.85rem', textTransform: 'none', color: 'var(--text-ink)', fontWeight: 600 }}>
+                {venturesData[0].role}
+              </p>
+              <ul className="bullet-list" style={{ marginTop: '0.35rem' }}>
+                {venturesData[0].desc.map((d, dIdx) => (
+                  <li key={dIdx} className="body-text" style={{ fontSize: '0.95rem', lineHeight: '1.65' }}>{d}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
         </Section>
 
         <Section 
