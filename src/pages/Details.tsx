@@ -29,6 +29,7 @@ import photoDebating from '../assets/Sujal Photo/SujalPhoto_Debating.webp';
 import photoParliament from '../assets/Sujal Photo/SujalPhoto_Parliament.webp';
 import photoLanding from '../assets/Sujal Photo/SujalPhoto_Landing.webp';
 import photoRotaract from '../assets/Sujal Photo/Sujal_Rotaract.jpg';
+import photoWorking from '../assets/Sujal Photo/SujalPhoto_Working.webp';
 import photoLandscape from '../assets/Sujal Photo/View_Landscape.jpg';
 
 const sectionIds: SectionId[] = [
@@ -373,25 +374,22 @@ const Details = () => {
               </ul>
             </article>
 
-            <div style={{ padding: '1.25rem 1.5rem', border: '1px solid #eee', backgroundColor: '#fcfcfc' }}>
-              <p className="item-meta" style={{ marginBottom: '1rem' }}>At a Glance</p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1.25rem' }}>
-                <div>
-                  <div style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', lineHeight: '1.2' }}>3</div>
-                  <div className="item-meta" style={{ marginTop: '0.3rem', textTransform: 'none', fontWeight: 400, letterSpacing: '0' }}>Active Roles</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', lineHeight: '1.2' }}>2025–</div>
-                  <div className="item-meta" style={{ marginTop: '0.3rem', textTransform: 'none', fontWeight: 400, letterSpacing: '0' }}>Present</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', lineHeight: '1.2' }}>District 3292</div>
-                  <div className="item-meta" style={{ marginTop: '0.3rem', textTransform: 'none', fontWeight: 400, letterSpacing: '0' }}>Nepal & Bhutan</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', lineHeight: '1.2' }}>Zone VIII</div>
-                  <div className="item-meta" style={{ marginTop: '0.3rem', textTransform: 'none', fontWeight: 400, letterSpacing: '0' }}>Zonal Secretary</div>
-                </div>
+            <div className="rotaract-stats-strip">
+              <div className="rotaract-stat-item">
+                <span className="rotaract-stat-number">03</span>
+                <span className="rotaract-stat-label">Active Leadership Roles</span>
+              </div>
+              <div className="rotaract-stat-item">
+                <span className="rotaract-stat-number">2025–</span>
+                <span className="rotaract-stat-label">Present Continuous</span>
+              </div>
+              <div className="rotaract-stat-item">
+                <span className="rotaract-stat-number">RID 3292</span>
+                <span className="rotaract-stat-label">Nepal &amp; Bhutan</span>
+              </div>
+              <div className="rotaract-stat-item">
+                <span className="rotaract-stat-number">Zone VIII</span>
+                <span className="rotaract-stat-label">Zonal Secretariat</span>
               </div>
             </div>
           </div>
@@ -588,18 +586,17 @@ const Details = () => {
           reversed={false}
           sideContent={
             <div className="side-image-small">
-              <div style={{ border: '1px solid #d1d1d1', padding: '1.25rem', background: '#fff', boxSizing: 'border-box' }}>
-                <div className="item-meta" style={{ marginBottom: '0.4rem', fontSize: '0.72rem' }}>Enterprise</div>
-                <h5 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>Lunar Chronicles Ltd.</h5>
-                <p className="item-subtitle" style={{ fontSize: '0.8rem', marginBottom: '1rem', textTransform: 'none', lineHeight: '1.4' }}>
-                  Media, Strategic Healthcare Dialogues & Digital Communication
-                </p>
+              <img 
+                src={photoWorking} 
+                alt="Sujal - Independent Ventures" 
+              />
+              <div style={{ marginTop: '1rem', textAlign: 'center' }}>
                 <a 
                   href="https://lunarchronicles.com.np" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn-primary" 
-                  style={{ padding: '0.55rem 1rem', width: '100%', textAlign: 'center', display: 'inline-block', boxSizing: 'border-box', fontSize: '0.72rem' }}
+                  style={{ width: '100%', padding: '0.6rem 1.25rem', fontSize: '0.72rem', display: 'inline-flex', justifyContent: 'center' }}
                 >
                   Visit Venture &rarr;
                 </a>

@@ -335,27 +335,33 @@ export const featuredProjects: ProjectItem[] = [
 
 export const skillsData: SkillCategory[] = [
   {
-    category: 'Languages',
-    skills: ['JavaScript', 'TypeScript', 'Go (Golang)', 'Python', 'C', 'C++', 'SQL']
+    category: 'Distributed Systems & Core Engineering',
+    desc: 'Architecting high-concurrency microservices, zero-trust protocols, and performant networked applications with strict requirements for latency, memory efficiency, and thread safety.',
+    skills: ['Go (Golang)', 'Python', 'TypeScript', 'C', 'C++', 'SQL', 'Concurrency', 'Network Protocols']
   },
   {
-    category: 'Front-End',
-    skills: ['React', 'Next.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'Responsive Design', 'Vite']
+    category: 'Interface Engineering & Modern Web',
+    desc: 'Crafting responsive, accessible, and component-driven web platforms. Focused on design tokens, modular state architectures, fast rendering pipelines, and Core Web Vitals optimization.',
+    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5 / Modern CSS', 'Vite', 'Responsive Systems']
   },
   {
-    category: 'Back-End & Data',
-    skills: ['Node.js', 'Express', 'REST APIs', 'Microservices', 'Kafka', 'PostgreSQL', 'Redis']
+    category: 'Backend Services, Messaging & Storage',
+    desc: 'Engineering resilient event-driven microservices, partitioned message streaming for distributed systems, high-speed in-memory caching tiers, and relational schema modeling.',
+    skills: ['Node.js', 'Express', 'Go/Gin', 'Apache Kafka', 'Redis', 'PostgreSQL', 'RESTful APIs', 'Microservices']
   },
   {
-    category: 'DevOps & Tools',
-    skills: ['Docker', 'Git & GitHub', 'CI basics', 'Linux', 'VS Code', 'Vercel', 'Netlify']
+    category: 'Applied AI & Machine Learning Research',
+    desc: 'Developing diagnostic computer vision systems and decentralized privacy-preserving learning workflows. Published IEEE researcher on multi-label disease classification using deep residual networks.',
+    skills: ['ResNet-50', 'Federated Learning', 'PyTorch', 'Transfer Learning', 'Computer Vision', 'Data Pipelines']
   },
   {
-    category: 'Design & UI/UX',
-    skills: ['Figma', 'Canva', 'Adobe Creative Suite', 'Wireframing', 'Usability Testing', 'Design Systems']
+    category: 'Cloud Infrastructure & DevOps Tooling',
+    desc: 'Containerizing distributed microservices, managing Linux environments, automating continuous integration and delivery pipelines, and coordinating open-source git workflows.',
+    skills: ['Docker', 'Linux / Bash', 'Git & GitHub Actions', 'CI/CD Pipelines', 'Cloudflare Pages / Workers', 'Vercel']
   },
   {
-    category: 'Agile & Leadership',
-    skills: ['Scrum', 'Kanban', 'Sprint Planning', 'Jira', 'Trello', 'Cross-functional Leadership', 'Public Speaking']
+    category: 'Product Design & Design Systems',
+    desc: 'Translating complex operational workflows into intuitive, high-fidelity user experiences. Leading end-to-end design systems, typography guidelines, and event brand identities.',
+    skills: ['Figma', 'Adobe Creative Suite', 'Design Systems', 'Wireframing', 'Usability Testing', 'UI/UX Strategy']
   }
 ];

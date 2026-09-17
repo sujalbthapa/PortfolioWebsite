@@ -14,13 +14,15 @@ const SkillsMatrix: React.FC<SkillsMatrixProps> = ({ categories }) => {
             <span className="toolkit-index">0{idx + 1} //</span>
             <h4 className="toolkit-category">{cat.category}</h4>
           </div>
-          <div className="toolkit-items">
-            {cat.skills.map((skill, sIdx) => (
-              <span key={sIdx} className="toolkit-tag">
-                <span className="toolkit-tag-dot" aria-hidden="true">•</span>
-                <span>{skill}</span>
-              </span>
-            ))}
+          <div className="toolkit-row-body">
+            {cat.desc && <p className="body-text toolkit-desc">{cat.desc}</p>}
+            <div className="toolkit-items">
+              {cat.skills.map((skill, sIdx) => (
+                <span key={sIdx} className="toolkit-tag">
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
         </article>
       ))}
