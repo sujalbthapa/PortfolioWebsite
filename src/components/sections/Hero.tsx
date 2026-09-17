@@ -9,11 +9,14 @@ const Hero: React.FC = () => {
       <div className="hero-split">
         <div className="hero-text-side">
           <div className="hero-text-content">
-            <h2 className="editorial-subtitle">Software Engineer & Creative Strategist</h2>
-            <h1 className="editorial-title">Sujal Bikram<br /><em>Thapa</em><span className="dot">.</span></h1>
+            <h2 className="editorial-subtitle">Hello! I'm</h2>
+            <h1 className="editorial-title">
+              <span style={{ whiteSpace: 'nowrap' }}>Sujal Bikram</span><br />
+              <em>Thapa</em><span className="dot">.</span>
+            </h1>
             
             <p className="lead-text hero-lead">
-              Building high-concurrency distributed systems, privacy-preserving machine learning pipelines, and full-stack web platforms—grounded in multilateral diplomacy, community leadership, and design craftsmanship.
+              I build software, study geopolitics, and lead service projects—all with a nerdy geek's curiosity.
             </p>
 
             <div className="hero-cta-wrapper" style={{ marginTop: '1.5rem', marginBottom: '1.25rem' }}>
