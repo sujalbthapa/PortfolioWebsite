@@ -15,7 +15,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
 
   const links: { id: SectionId; label: string }[] = [
     { id: 'profile', label: 'Profile' },
-    { id: 'leadership', label: 'Leadership' },
+    { id: 'leadership', label: 'Experience' },
+    { id: 'ventures', label: 'Ventures' },
     { id: 'skills', label: 'Toolkit' },
     { id: 'expertise', label: 'Expertise' },
     { id: 'research', label: 'Research' },

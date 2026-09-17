@@ -9,7 +9,7 @@ export const profileData: ProfileData = {
   ]
 };
 
-export const leadershipData: ExperienceItem[] = [
+export const professionalExperienceData: ExperienceItem[] = [
   {
     role: "Full Stack Engineer Intern",
     company: "Fusemachines",
@@ -20,25 +20,14 @@ export const leadershipData: ExperienceItem[] = [
     ]
   },
   {
-    role: "Co-Founder & Managing Director",
-    company: "Lunar Chronicles Ltd.",
-    date: "2025 – Present",
+    role: "UI/UX Designer, Web Developer & Event Organiser",
+    company: "Nepal Open Source Klub (NOSK)",
+    date: "Feb 2023 – Jan 2026",
     desc: [
-      "Oversee strategic planning and operations; coordinated high-profile Health Dialogues with then Health Minister Hon. Pradeep Poudel and Heart Surgeon Dr. Bhagwan Koirala."
+      "Managed end-to-end web development lifecycle for 3 major events (SFD 2024, Noskathon Lite, SFD 2025); coordinated distributed contributor teams via GitHub workflows.",
+      "Engineered responsive event platforms and directed digital visual branding across promotional touchpoints."
     ]
   },
-  {
-    role: "MUN Trainer & Organizer / UI-UX Designer",
-    company: "Youth Thinkers' Society (YTS)",
-    date: "2022 – 2026",
-    desc: [
-      "Trained students and delegates in multilateral diplomacy, negotiation, policy research, and public speaking; co-organized regional conferences.",
-      "Created branding and digital assets for EIMUN and provincial MUN platforms."
-    ]
-  }
-];
-
-export const secondaryLeadershipData: ExperienceItem[] = [
   {
     role: "Web Design & Development Lead",
     company: "NCIT Tech Fest",
@@ -46,13 +35,31 @@ export const secondaryLeadershipData: ExperienceItem[] = [
     desc: [
       "Ran the design and web workflow end to end for NCIT's annual tech festival, producing event branding, participant onboarding interfaces, and promotional digital assets."
     ]
-  },
+  }
+];
+
+export const leadershipData = professionalExperienceData;
+
+export const venturesData: ExperienceItem[] = [
   {
-    role: "UI/UX Designer, Web Developer & Event Organiser",
-    company: "Nepal Open Source Klub (NOSK)",
-    date: "Feb 2023 – Jan 2026",
+    role: "Co-Founder & Managing Director",
+    company: "Lunar Chronicles Ltd.",
+    date: "2025 – Present",
     desc: [
-      "Managed end-to-end web development lifecycle for 3 major events (SFD 2024, Noskathon Lite, SFD 2025); coordinated distributed contributor teams via GitHub workflows."
+      "Oversee strategic planning and executive operations; coordinated high-profile Health Dialogues with then Health Minister Hon. Pradeep Poudel and Heart Surgeon Dr. Bhagwan Koirala.",
+      "Direct digital platform architecture, brand identity, and cross-sector partnerships spanning health communication and public discourse."
+    ]
+  }
+];
+
+export const diplomacyLeadershipData: ExperienceItem[] = [
+  {
+    role: "MUN Trainer & Organizer / UI-UX Designer",
+    company: "Youth Thinkers' Society (YTS)",
+    date: "2022 – 2026",
+    desc: [
+      "Trained students and delegates in multilateral diplomacy, negotiation, policy research, and public speaking; co-organized regional conferences.",
+      "Created branding and digital assets for EIMUN and provincial MUN platforms."
     ]
   },
   {
@@ -73,6 +80,8 @@ export const secondaryLeadershipData: ExperienceItem[] = [
     ]
   }
 ];
+
+export const secondaryLeadershipData: ExperienceItem[] = [];
 
 export const academicData: ExperienceItem[] = [
   {

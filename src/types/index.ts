@@ -58,6 +58,7 @@ export type SectionId =
   | 'home' 
   | 'profile' 
   | 'leadership' 
+  | 'ventures'
   | 'skills' 
   | 'expertise' 
   | 'research' 

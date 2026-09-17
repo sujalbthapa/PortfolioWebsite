@@ -9,8 +9,9 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 import { 
   profileData, 
-  leadershipData, 
-  secondaryLeadershipData, 
+  professionalExperienceData,
+  venturesData,
+  diplomacyLeadershipData,
   rotaractData, 
   academicData, 
   expertiseItems, 
@@ -33,6 +34,7 @@ import photoLandscape from '../assets/Sujal Photo/View_Landscape.jpg';
 const sectionIds: SectionId[] = [
   'profile',
   'leadership',
+  'ventures',
   'skills',
   'expertise',
   'research',
@@ -46,7 +48,6 @@ const Details = () => {
   useScrollReveal();
   const activeSection = useScrollSpy(sectionIds, 'profile');
   const [showAllCVs, setShowAllCVs] = useState(false);
-  const [showMoreLeadership, setShowMoreLeadership] = useState(false);
   const [allExpertiseExpanded, setAllExpertiseExpanded] = useState(false);
   const [allMunExpanded, setAllMunExpanded] = useState(false);
   const [allCivicExpanded, setAllCivicExpanded] = useState(false);
@@ -58,7 +59,6 @@ const Details = () => {
       const target = e.target as HTMLElement | null;
       if (!target) return;
       if (target.closest('#profile')) setShowAllCVs(true);
-      if (target.closest('#leadership')) setShowMoreLeadership(true);
       if (target.closest('#expertise')) setAllExpertiseExpanded(true);
       if (target.closest('#mun')) setAllMunExpanded(true);
       if (target.closest('#civic')) setAllCivicExpanded(true);
@@ -179,40 +179,71 @@ const Details = () => {
           <div className="section-header">
             <div>
               <div className="section-number">02</div>
-              <h3 className="section-title">Professional<br /><em>Impact</em></h3>
+              <h3 className="section-title">Professional<br /><em>Experience</em></h3>
             </div>
           </div>
           
           <div className="leadership-layout">
             <div>
-              <ExperienceList items={leadershipData} />
-              <div hidden={!showMoreLeadership ? ('until-found' as unknown as boolean) : undefined} style={{ marginTop: '1rem' }}>
-                <ExperienceList items={secondaryLeadershipData} />
-              </div>
+              <ExperienceList items={professionalExperienceData} />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
                 <img 
                   src={photoParliament} 
-                  alt="Sujal - Leadership" 
+                  alt="Sujal - Engineering & Leadership" 
                   style={{ width: '100%', height: 'auto', border: '1px solid #d1d1d1' }} />
-                <div style={{ marginTop: '1.25rem', textAlign: 'center' }}>
-                  <button 
-                    className="btn-primary" 
-                    onClick={() => setShowMoreLeadership(!showMoreLeadership)}
-                    style={{ width: '100%', padding: '0.75rem 1.5rem' }}
-                  >
-                    {showMoreLeadership ? 'Show Less' : 'View More Responsibilities'}
-                  </button>
-                </div>
               </div>
             </div>
           </div>
         </section>
 
         <Section 
-          id="skills" 
+          id="ventures" 
           number="03" 
+          title={<>Independent<br /><em>Ventures</em></>}
+          sideContent={
+            <div className="side-image-small">
+              <div style={{ border: '1px solid #d1d1d1', padding: '1.5rem', background: '#fff', boxSizing: 'border-box' }}>
+                <div className="item-meta" style={{ marginBottom: '0.4rem', fontSize: '0.75rem' }}>Enterprise</div>
+                <h5 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.35rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>Lunar Chronicles Ltd.</h5>
+                <p className="item-subtitle" style={{ fontSize: '0.82rem', marginBottom: '1rem', textTransform: 'none', lineHeight: '1.5' }}>
+                  Media, Strategic Healthcare Dialogues & Digital Communication
+                </p>
+                <a 
+                  href="https://lunarchronicles.com.np" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-primary" 
+                  style={{ padding: '0.55rem 1rem', width: '100%', textAlign: 'center', display: 'inline-block', boxSizing: 'border-box', fontSize: '0.72rem' }}
+                >
+                  Visit Venture &rarr;
+                </a>
+              </div>
+            </div>
+          }
+        >
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.75rem' }}>
+              <div className="item-meta" style={{ marginBottom: '0.6rem' }}>{venturesData[0].date}</div>
+              <h4 className="article-title" style={{ fontSize: '2rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>
+                {venturesData[0].company}
+              </h4>
+              <p className="item-subtitle" style={{ fontSize: '1rem', marginBottom: '1rem', textTransform: 'none', color: 'var(--text-ink)', fontWeight: 600 }}>
+                {venturesData[0].role}
+              </p>
+              <ul className="bullet-list" style={{ marginTop: '0.5rem' }}>
+                {venturesData[0].desc.map((d, dIdx) => (
+                  <li key={dIdx} className="body-text" style={{ fontSize: '0.98rem', lineHeight: '1.65' }}>{d}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </Section>
+
+        <Section 
+          id="skills" 
+          number="04" 
           title={<>Technical<br /><em>Toolkit</em></>}
         >
           <SkillsMatrix categories={skillsData} />
@@ -220,7 +251,7 @@ const Details = () => {
 
         <Section 
           id="expertise" 
-          number="04" 
+          number="05" 
           title={<>Domains of<br /><em>Expertise</em></>}
           sideContent={
             <div className="side-image-small">
@@ -275,7 +306,7 @@ const Details = () => {
 
         <Section 
           id="research" 
-          number="05" 
+          number="06" 
           title={<>Research &<br /><em>Publications</em></>}
         >
           <article className="article-card" style={{ marginTop: '0.75rem' }}>
@@ -310,7 +341,7 @@ const Details = () => {
 
         <Section 
           id="mun" 
-          number="06" 
+          number="07" 
           title={<>Diplomacy &<br /><em>Public Policy</em></>}
           className="mun-section-tight"
           sideContent={
@@ -349,6 +380,33 @@ const Details = () => {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+                <div className="item-meta" style={{ marginBottom: '0.2rem' }}>2021 – Present</div>
+                <div className="article-category" style={{ margin: '0 0 0.2rem 0' }}>Diplomatic Organizations & Training</div>
+                <h4 className="article-title" style={{ fontSize: '1.4rem', marginBottom: '0.25rem', lineHeight: '1.3', fontFamily: 'var(--font-serif)' }}>Youth Thinkers' Society (YTS) & Regional Platforms</h4>
+                <p className="body-text" style={{ color: allMunExpanded ? 'var(--text-gray)' : 'var(--text-charcoal)' }}>
+                  Delegate instruction, conference governance, and digital strategy across flagship diplomacy institutions.
+                </p>
+                <div hidden={!allMunExpanded ? ('until-found' as unknown as boolean) : undefined}>
+                  <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                    {diplomacyLeadershipData.map((d, dIdx) => (
+                      <div key={dIdx}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '0.5rem' }}>
+                          <span style={{ fontWeight: 700, fontSize: '1.05rem' }}>{d.role}</span>
+                          <span className="item-meta" style={{ fontSize: '0.75rem' }}>{d.date}</span>
+                        </div>
+                        <span style={{ color: 'var(--text-ink)', fontSize: '0.88rem', fontWeight: 500, display: 'block', marginBottom: '0.35rem' }}>{d.company}</span>
+                        <ul className="bullet-list" style={{ marginTop: '0.25rem' }}>
+                          {d.desc.map((descLine, lIdx) => (
+                            <li key={lIdx} className="body-text" style={{ color: 'var(--text-gray)' }}>{descLine}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </article>
+
               <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
                 <div className="item-meta" style={{ marginBottom: '0.2rem' }}>2021 – Present</div>
                 <div className="article-category" style={{ margin: '0 0 0.2rem 0' }}>Leadership</div>
@@ -423,7 +481,7 @@ const Details = () => {
 
         <Section 
           id="rotaract" 
-          number="07" 
+          number="08" 
           title={<>Rotaract &<br /><em>Global Service</em></>}
           sideContent={
             <div className="side-image-small">
@@ -491,7 +549,7 @@ const Details = () => {
 
         <Section 
           id="civic" 
-          number="08" 
+          number="09" 
           title={<>Civic<br /><em>Involvement</em></>}
           sideContent={
             <div className="side-image-small">
@@ -550,7 +608,7 @@ const Details = () => {
 
         <Section
           id="academic"
-          number="09" 
+          number="10" 
           title={<>Academic<br /><em>Foundations</em></>}
           sideContent={
             <div className="side-image-small">
