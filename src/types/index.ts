@@ -51,6 +51,7 @@ export interface ProjectItem {
 
 export interface SkillCategory {
   category: string;
+  title?: string;
   desc?: string;
   skills: string[];
 }

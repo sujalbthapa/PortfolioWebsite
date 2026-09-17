@@ -335,32 +335,38 @@ export const featuredProjects: ProjectItem[] = [
 
 export const skillsData: SkillCategory[] = [
   {
-    category: 'Distributed Systems & Core Engineering',
+    category: 'Core Systems & Concurrency',
+    title: 'Distributed Systems & Core Engineering',
     desc: 'Architecting high-concurrency microservices, zero-trust protocols, and performant networked applications with strict requirements for latency, memory efficiency, and thread safety.',
     skills: ['Go (Golang)', 'Python', 'TypeScript', 'C', 'C++', 'SQL', 'Concurrency', 'Network Protocols']
   },
   {
-    category: 'Interface Engineering & Modern Web',
-    desc: 'Crafting responsive, accessible, and component-driven web platforms. Focused on design tokens, modular state architectures, fast rendering pipelines, and Core Web Vitals optimization.',
-    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5 / Modern CSS', 'Vite', 'Responsive Systems']
-  },
-  {
-    category: 'Backend Services, Messaging & Storage',
+    category: 'Data & Event Streaming',
+    title: 'Backend Services & Storage Tiers',
     desc: 'Engineering resilient event-driven microservices, partitioned message streaming for distributed systems, high-speed in-memory caching tiers, and relational schema modeling.',
     skills: ['Node.js', 'Express', 'Go/Gin', 'Apache Kafka', 'Redis', 'PostgreSQL', 'RESTful APIs', 'Microservices']
   },
   {
-    category: 'Applied AI & Machine Learning Research',
-    desc: 'Developing diagnostic computer vision systems and decentralized privacy-preserving learning workflows. Published IEEE researcher on multi-label disease classification using deep residual networks.',
-    skills: ['ResNet-50', 'Federated Learning', 'PyTorch', 'Transfer Learning', 'Computer Vision', 'Data Pipelines']
-  },
-  {
-    category: 'Cloud Infrastructure & DevOps Tooling',
+    category: 'DevOps & Cloud Platforms',
+    title: 'Cloud Infrastructure & Tooling',
     desc: 'Containerizing distributed microservices, managing Linux environments, automating continuous integration and delivery pipelines, and coordinating open-source git workflows.',
     skills: ['Docker', 'Linux / Bash', 'Git & GitHub Actions', 'CI/CD Pipelines', 'Cloudflare Pages / Workers', 'Vercel']
   },
   {
-    category: 'Product Design & Design Systems',
+    category: 'Interface & Modern Web',
+    title: 'Frontend Engineering & Systems',
+    desc: 'Crafting responsive, accessible, and component-driven web platforms. Focused on design tokens, modular state architectures, fast rendering pipelines, and Core Web Vitals optimization.',
+    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5 / Modern CSS', 'Vite', 'Responsive Systems']
+  },
+  {
+    category: 'Intelligence & Research',
+    title: 'Applied AI & Machine Learning Research',
+    desc: 'Developing diagnostic computer vision systems and decentralized privacy-preserving learning workflows. Published IEEE researcher on multi-label disease classification using deep residual networks.',
+    skills: ['ResNet-50', 'Federated Learning', 'PyTorch', 'Transfer Learning', 'Computer Vision', 'Data Pipelines']
+  },
+  {
+    category: 'Visual & User Experience',
+    title: 'Product Design & Design Systems',
     desc: 'Translating complex operational workflows into intuitive, high-fidelity user experiences. Leading end-to-end design systems, typography guidelines, and event brand identities.',
     skills: ['Figma', 'Adobe Creative Suite', 'Design Systems', 'Wireframing', 'Usability Testing', 'UI/UX Strategy']
   }
