@@ -441,27 +441,28 @@ const Details = () => {
               <h4 className="article-title" style={{ fontSize: '2rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>
                 Rotaract Club of Central Valley Kasthamandap
               </h4>
-              <p className="item-subtitle" style={{ fontSize: '0.9rem', marginBottom: '1.25rem', textTransform: 'none', letterSpacing: '0.04em' }}>
+              <p className="item-subtitle" style={{ fontSize: '0.9rem', marginBottom: '0', textTransform: 'none', letterSpacing: '0.04em' }}>
                 RID 3292 — Nepal & Bhutan &nbsp;•&nbsp; Zone VIII
               </p>
 
-              <div className="rotaract-timeline">
+              <ul className="editorial-list" style={{ marginTop: '0.5rem' }}>
                 {rotaractData.map((item, idx) => (
-                  <div key={idx} className="rotaract-role-item">
-                    <span className="rotaract-role-dot" aria-hidden="true" />
-                    <div className="item-meta" style={{ marginBottom: '0.2rem', fontSize: '0.78rem' }}>{item.date}</div>
-                    <h5 className="rotaract-role-title">{item.role}</h5>
-                    {item.company !== "Rotaract Club of Central Valley Kasthamandap" && (
-                      <div className="rotaract-role-context">{item.company}</div>
-                    )}
-                    <ul className="bullet-list" style={{ marginTop: '0.4rem' }}>
-                      {item.desc.map((d, dIdx) => (
-                        <li key={dIdx} className="body-text">{d}</li>
-                      ))}
-                    </ul>
-                  </div>
+                  <li key={idx} className="editorial-list-item">
+                    <div className="item-meta">{item.date}</div>
+                    <div>
+                      <h5 className="item-title">{item.role}</h5>
+                      {item.company !== "Rotaract Club of Central Valley Kasthamandap" && (
+                        <div className="item-subtitle" style={{ marginBottom: '0.5rem' }}>{item.company}</div>
+                      )}
+                      <ul className="bullet-list">
+                        {item.desc.map((d, dIdx) => (
+                          <li key={dIdx} className="body-text">{d}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </article>
 
             <div style={{ padding: '1.75rem 2rem', border: '1px solid #eee', backgroundColor: '#fcfcfc' }}>
