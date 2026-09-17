@@ -335,39 +335,39 @@ export const featuredProjects: ProjectItem[] = [
 
 export const skillsData: SkillCategory[] = [
   {
-    category: 'Core Systems & Concurrency',
+    category: 'Systems & Architecture',
     title: 'Distributed Systems & Core Engineering',
-    desc: 'Architecting high-concurrency microservices, zero-trust protocols, and performant networked applications with strict requirements for latency, memory efficiency, and thread safety.',
+    desc: 'High-concurrency microservices, low-latency networking, and systems programming.',
     skills: ['Go (Golang)', 'Python', 'TypeScript', 'C', 'C++', 'SQL', 'Concurrency', 'Network Protocols']
   },
   {
-    category: 'Data & Event Streaming',
+    category: 'Backend & Data',
     title: 'Backend Services & Storage Tiers',
-    desc: 'Engineering resilient event-driven microservices, partitioned message streaming for distributed systems, high-speed in-memory caching tiers, and relational schema modeling.',
+    desc: 'Event-driven architectures, message queues, and distributed caching tiers.',
     skills: ['Node.js', 'Express', 'Go/Gin', 'Apache Kafka', 'Redis', 'PostgreSQL', 'RESTful APIs', 'Microservices']
   },
   {
-    category: 'DevOps & Cloud Platforms',
+    category: 'Cloud & DevOps',
     title: 'Cloud Infrastructure & Tooling',
-    desc: 'Containerizing distributed microservices, managing Linux environments, automating continuous integration and delivery pipelines, and coordinating open-source git workflows.',
+    desc: 'Container orchestration, automated CI/CD pipelines, and Linux administration.',
     skills: ['Docker', 'Linux / Bash', 'Git & GitHub Actions', 'CI/CD Pipelines', 'Cloudflare Pages / Workers', 'Vercel']
   },
   {
-    category: 'Interface & Modern Web',
-    title: 'Frontend Engineering & Systems',
-    desc: 'Crafting responsive, accessible, and component-driven web platforms. Focused on design tokens, modular state architectures, fast rendering pipelines, and Core Web Vitals optimization.',
+    category: 'Frontend & Web',
+    title: 'Interface Engineering & Modern Web',
+    desc: 'Component-driven web applications, design systems, and responsive UI architecture.',
     skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5 / Modern CSS', 'Vite', 'Responsive Systems']
   },
   {
-    category: 'Intelligence & Research',
+    category: 'AI & Research',
     title: 'Applied AI & Machine Learning Research',
-    desc: 'Developing diagnostic computer vision systems and decentralized privacy-preserving learning workflows. Published IEEE researcher on multi-label disease classification using deep residual networks.',
+    desc: 'Computer vision diagnostics, deep residual networks, and federated learning workflows.',
     skills: ['ResNet-50', 'Federated Learning', 'PyTorch', 'Transfer Learning', 'Computer Vision', 'Data Pipelines']
   },
   {
-    category: 'Visual & User Experience',
+    category: 'Product & Design',
     title: 'Product Design & Design Systems',
-    desc: 'Translating complex operational workflows into intuitive, high-fidelity user experiences. Leading end-to-end design systems, typography guidelines, and event brand identities.',
+    desc: 'Design system governance, UI/UX strategy, and high-fidelity prototyping.',
     skills: ['Figma', 'Adobe Creative Suite', 'Design Systems', 'Wireframing', 'Usability Testing', 'UI/UX Strategy']
   }
 ];

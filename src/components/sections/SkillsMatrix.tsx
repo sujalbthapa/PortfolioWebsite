@@ -17,7 +17,7 @@ const SkillsMatrix: React.FC<SkillsMatrixProps> = ({ categories }) => {
         {cat.title || cat.category}
       </h4>
       {cat.desc && (
-        <p className="body-text" style={{ color: 'var(--text-charcoal)', marginBottom: '0.65rem' }}>
+        <p className="body-text" style={{ color: 'var(--text-charcoal)', fontSize: '0.92rem', lineHeight: '1.55', marginBottom: '0.65rem' }}>
           {cat.desc}
         </p>
       )}
