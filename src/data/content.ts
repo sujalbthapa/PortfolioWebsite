@@ -44,34 +44,15 @@ export const venturesData: ExperienceItem[] = [
   }
 ];
 
-export const diplomacyLeadershipData: ExperienceItem[] = [
-  {
-    role: "MUN Trainer & Organizer / UI-UX Designer",
-    company: "Youth Thinkers' Society (YTS)",
-    date: "2022 – 2026",
-    desc: [
-      "Trained students and delegates in multilateral diplomacy, negotiation, policy research, and public speaking; co-organized regional conferences.",
-      "Created branding and digital assets for EIMUN and provincial MUN platforms."
-    ]
-  },
-  {
-    role: "Vice President & Creative Design Lead",
-    company: "MUN Society Nepal",
-    date: "Sep 2024 – Present",
-    desc: [
-      "Oversee digital infrastructure and innovation strategy across regional chapters for events, campaigns, and publications."
-    ]
-  },
-  {
-    role: "Director General & Head of IT",
-    company: "Trinity International MUN (TIMUN 5.0 & 6.0)",
-    date: "2021 – 2023",
-    desc: [
-      "Directed conference operations and technology infrastructure for two flagship international MUN conferences.",
-      "Coordinated campus technical exhibitions and represented the institution at regional educational forums."
-    ]
-  }
-];
+export const ytsData: ExperienceItem = {
+  role: "MUN Trainer & Organizer / UI-UX Designer",
+  company: "Youth Thinkers' Society (YTS)",
+  date: "2022 – 2026",
+  desc: [
+    "Trained students and delegates in multilateral diplomacy, negotiation, policy research, and public speaking; co-organized regional conferences.",
+    "Created branding and digital assets for EIMUN and provincial MUN platforms."
+  ]
+};
 
 export const secondaryLeadershipData: ExperienceItem[] = [
   {

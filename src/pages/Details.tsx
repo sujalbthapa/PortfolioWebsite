@@ -12,7 +12,7 @@ import {
   professionalExperienceData,
   secondaryLeadershipData,
   venturesData,
-  diplomacyLeadershipData,
+  ytsData,
   rotaractData, 
   academicData, 
   expertiseItems, 
@@ -290,7 +290,7 @@ const Details = () => {
           <div className="editorial-grid-2">
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {expertiseItems.slice(0, 4).map(item => (
-                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+                <article key={item.id} className="article-card">
                   <div className="article-category">{item.category}</div>
                   <h4 className="article-title" style={{ fontSize: '1.25rem', marginBottom: '0.4rem', lineHeight: '1.3' }}>{item.title}</h4>
                   <p className="body-text" style={{ color: allExpertiseExpanded ? 'var(--text-gray)' : 'var(--text-charcoal)' }}>
@@ -305,7 +305,7 @@ const Details = () => {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {expertiseItems.slice(4).map(item => (
-                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+                <article key={item.id} className="article-card">
                   <div className="article-category">{item.category}</div>
                   <h4 className="article-title" style={{ fontSize: '1.25rem', marginBottom: '0.4rem', lineHeight: '1.3' }}>{item.title}</h4>
                   <p className="body-text" style={{ color: allExpertiseExpanded ? 'var(--text-gray)' : 'var(--text-charcoal)' }}>
@@ -344,7 +344,7 @@ const Details = () => {
           }
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-            <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
+            <article className="article-card">
               <div className="item-meta" style={{ marginBottom: '0.5rem' }}>2025 – Present</div>
               <h4 className="article-title" style={{ fontSize: '1.75rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>
                 Rotaract Club of Central Valley Kasthamandap
@@ -438,34 +438,18 @@ const Details = () => {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
-                <div className="item-meta" style={{ marginBottom: '0.2rem' }}>2021 – Present</div>
-                <div className="article-category" style={{ margin: '0 0 0.2rem 0' }}>Diplomatic Organizations & Training</div>
-                <h4 className="article-title" style={{ fontSize: '1.35rem', marginBottom: '0.25rem', lineHeight: '1.3', fontFamily: 'var(--font-serif)' }}>Youth Thinkers' Society (YTS) & Regional Platforms</h4>
-                <p className="body-text" style={{ color: allMunExpanded ? 'var(--text-gray)' : 'var(--text-charcoal)' }}>
-                  Delegate instruction, conference governance, and digital strategy across flagship diplomacy institutions.
-                </p>
-                <div hidden={!allMunExpanded ? ('until-found' as unknown as boolean) : undefined}>
-                  <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                    {diplomacyLeadershipData.map((d, dIdx) => (
-                      <div key={dIdx}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '0.5rem' }}>
-                          <span style={{ fontWeight: 700, fontSize: '1.05rem' }}>{d.role}</span>
-                          <span className="item-meta" style={{ fontSize: '0.75rem' }}>{d.date}</span>
-                        </div>
-                        <span style={{ color: 'var(--text-ink)', fontSize: '0.88rem', fontWeight: 500, display: 'block', marginBottom: '0.35rem' }}>{d.company}</span>
-                        <ul className="bullet-list" style={{ marginTop: '0.25rem' }}>
-                          {d.desc.map((descLine, lIdx) => (
-                            <li key={lIdx} className="body-text" style={{ color: 'var(--text-gray)' }}>{descLine}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              <article className="article-card">
+                <div className="item-meta" style={{ marginBottom: '0.35rem' }}>{ytsData.date}</div>
+                <h4 className="article-title" style={{ fontSize: '1.4rem', marginBottom: '0.35rem', lineHeight: '1.3', fontFamily: 'var(--font-serif)' }}>{ytsData.role}</h4>
+                <p className="item-subtitle" style={{ fontSize: '0.92rem', marginBottom: '0.65rem', textTransform: 'none', color: 'var(--text-ink)', fontWeight: 600 }}>{ytsData.company}</p>
+                <ul className="bullet-list">
+                  {ytsData.desc.map((d, idx) => (
+                    <li key={idx} className="body-text">{d}</li>
+                  ))}
+                </ul>
               </article>
 
-              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+              <article className="article-card">
                 <div className="item-meta" style={{ marginBottom: '0.2rem' }}>2021 – Present</div>
                 <div className="article-category" style={{ margin: '0 0 0.2rem 0' }}>Leadership</div>
                 <h4 className="article-title" style={{ fontSize: '1.35rem', marginBottom: '0.25rem', lineHeight: '1.3', fontFamily: 'var(--font-serif)' }}>Committee Leadership (The Dais)</h4>
@@ -494,7 +478,7 @@ const Details = () => {
                 </div>
               </article>
 
-              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+              <article className="article-card">
                 <div className="article-category" style={{ margin: '0.4rem 0 0.2rem 0' }}>Press & Media</div>
                 <h4 className="article-title" style={{ fontSize: '1.35rem', marginBottom: '0.25rem', lineHeight: '1.3', fontFamily: 'var(--font-serif)' }}>International Press Corps (IPC)</h4>
                 <p className="body-text" style={{ color: allMunExpanded ? 'var(--text-gray)' : 'var(--text-charcoal)' }}>
@@ -514,7 +498,7 @@ const Details = () => {
                 </div>
               </article>
 
-              <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+              <article className="article-card">
                 <div className="article-category" style={{ margin: '0.4rem 0 0.2rem 0' }}>Operations</div>
                 <h4 className="article-title" style={{ fontSize: '1.35rem', marginBottom: '0.25rem', lineHeight: '1.3', fontFamily: 'var(--font-serif)' }}>Secretariat & Operations</h4>
                 <p className="body-text" style={{ color: allMunExpanded ? 'var(--text-gray)' : 'var(--text-charcoal)' }}>
@@ -563,7 +547,7 @@ const Details = () => {
           <div className="editorial-grid-2">
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.15rem' }}>
               {civicItems.slice(0, 4).map(item => (
-                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+                <article key={item.id} className="article-card">
                   <div className="item-meta" style={{ marginBottom: '0.2rem' }}>{item.date}</div>
                   <div className="article-category" style={{ margin: '0 0 0.2rem 0' }}>{item.category}</div>
                   <h4 className="article-title" style={{ fontSize: '1.3rem', marginBottom: '0.25rem', lineHeight: '1.3' }}>{item.title}</h4>
@@ -580,7 +564,7 @@ const Details = () => {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.15rem' }}>
               {civicItems.slice(4).map(item => (
-                <article key={item.id} className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>
+                <article key={item.id} className="article-card">
                   <div className="item-meta" style={{ marginBottom: '0.2rem' }}>{item.date}</div>
                   <div className="article-category" style={{ margin: '0 0 0.2rem 0' }}>{item.category}</div>
                   <h4 className="article-title" style={{ fontSize: '1.3rem', marginBottom: '0.25rem', lineHeight: '1.3' }}>{item.title}</h4>
@@ -624,7 +608,7 @@ const Details = () => {
           }
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-            <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
+            <article className="article-card">
               <div className="item-meta" style={{ marginBottom: '0.5rem' }}>{venturesData[0].date}</div>
               <h4 className="article-title" style={{ fontSize: '1.75rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>
                 {venturesData[0].company}
