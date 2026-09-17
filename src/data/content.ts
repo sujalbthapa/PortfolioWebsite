@@ -1,11 +1,11 @@
 import type { ExperienceItem, ExpertiseItem, CivicItem, CVItem, ProfileData, ProjectItem, SkillCategory } from '../types';
 
 export const profileData: ProfileData = {
-  greeting: "Biographical Sketch",
-  leadText: "Software engineer and multidisciplinary lead bridging scalable architectures, multilateral diplomacy, and brand strategy.",
+  greeting: "$ whoami",
+  leadText: "I'm a software engineering student who happens to love diplomacy, design, and a good challenge.",
   bodyText: [
-    "I approach technology and leadership through the lens of complex systems—from high-concurrency microservices and federated credit scoring (SecureScore) to the delicate nuances of international diplomacy. Based in Kathmandu, my work encompasses engineering production software at Fusemachines, co-founding Lunar Chronicles Ltd., and publishing peer-reviewed deep learning research with IEEE.",
-    "Across 5+ years in the Model United Nations circuit (directing flagship conferences and training delegates) and executive leadership across Rotaract District 3292 and open-source communities like NOSK, I've developed a conviction that impactful engineering relies as much on active listening and multilateral empathy as it does on technical rigor."
+    "I've always been a bit of a geek about how things work—whether it's the logic of a React component or the complexity of international relations. Right now, I'm balancing my studies in Kathmandu with projects like co-founding Lunar Chronicles and researching deep learning. For me, it's less about the titles and more about the curiosity that comes with building something new.",
+    "My time in the MUN circuit and Rotaract has taught me that the best solutions usually come from listening and collaborating. I'm just a perpetual learner trying to use code and community to make things a little better, one project at a time."
   ]
 };
 

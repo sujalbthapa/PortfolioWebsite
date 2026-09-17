@@ -84,7 +84,7 @@ const Details = () => {
         <Section 
           id="profile" 
           number="01" 
-          title={<>Biographical<br /><em>Profile</em></>}
+          title={<>The<br /><em>Profile</em></>}
         >
           <div className="profile-grid">
             <div className="profile-content">
@@ -435,14 +435,14 @@ const Details = () => {
             </div>
           }
         >
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <article className="article-card" style={{ borderBottom: '1px solid #eee', paddingBottom: '1.75rem' }}>
               <div className="item-meta" style={{ marginBottom: '0.6rem' }}>2025 – Present</div>
               <h4 className="article-title" style={{ fontSize: '2rem', marginBottom: '0.35rem', lineHeight: '1.2' }}>
                 Rotaract Club of Central Valley Kasthamandap
               </h4>
-              <p className="item-subtitle" style={{ fontSize: '1rem', marginBottom: '1.25rem', textTransform: 'none' }}>
-                Rotaract District 3292 (Nepal & Bhutan) • Zone VIII
+              <p className="item-subtitle" style={{ fontSize: '0.9rem', marginBottom: '1.25rem', textTransform: 'none', letterSpacing: '0.04em' }}>
+                RID 3292 — Nepal & Bhutan &nbsp;•&nbsp; Zone VIII
               </p>
 
               <div className="rotaract-timeline">
@@ -466,14 +466,22 @@ const Details = () => {
 
             <div style={{ padding: '1.75rem 2rem', border: '1px solid #eee', backgroundColor: '#fcfcfc' }}>
               <p className="item-meta" style={{ marginBottom: '1.25rem' }}>At a Glance</p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.5rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1.5rem' }}>
                 <div>
-                  <div style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', lineHeight: '1.2' }}>District 3292</div>
+                  <div style={{ fontSize: '1.6rem', fontFamily: 'var(--font-serif)', lineHeight: '1.2' }}>3</div>
+                  <div className="item-meta" style={{ marginTop: '0.4rem', textTransform: 'none', fontWeight: 400, letterSpacing: '0' }}>Active Roles</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '1.6rem', fontFamily: 'var(--font-serif)', lineHeight: '1.2' }}>2025–</div>
+                  <div className="item-meta" style={{ marginTop: '0.4rem', textTransform: 'none', fontWeight: 400, letterSpacing: '0' }}>Present</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '1.6rem', fontFamily: 'var(--font-serif)', lineHeight: '1.2' }}>District 3292</div>
                   <div className="item-meta" style={{ marginTop: '0.4rem', textTransform: 'none', fontWeight: 400, letterSpacing: '0' }}>Nepal & Bhutan</div>
                 </div>
                 <div>
-                  <div style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', lineHeight: '1.2' }}>Zone VIII</div>
-                  <div className="item-meta" style={{ marginTop: '0.4rem', textTransform: 'none', fontWeight: 400, letterSpacing: '0' }}>Zonal Administration</div>
+                  <div style={{ fontSize: '1.6rem', fontFamily: 'var(--font-serif)', lineHeight: '1.2' }}>Zone VIII</div>
+                  <div className="item-meta" style={{ marginTop: '0.4rem', textTransform: 'none', fontWeight: 400, letterSpacing: '0' }}>Zonal Secretary</div>
                 </div>
               </div>
             </div>
