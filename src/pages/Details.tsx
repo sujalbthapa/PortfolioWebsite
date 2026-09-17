@@ -16,8 +16,7 @@ import {
   academicData, 
   expertiseItems, 
   civicItems,
-  skillsData,
-  cvData 
+  skillsData 
 } from '../data/content';
 import type { SectionId } from '../types';
 
@@ -47,7 +46,6 @@ const sectionIds: SectionId[] = [
 const Details = () => {
   useScrollReveal();
   const activeSection = useScrollSpy(sectionIds, 'profile');
-  const [showAllCVs, setShowAllCVs] = useState(false);
   const [allExpertiseExpanded, setAllExpertiseExpanded] = useState(false);
   const [allMunExpanded, setAllMunExpanded] = useState(false);
   const [allCivicExpanded, setAllCivicExpanded] = useState(false);
@@ -58,7 +56,6 @@ const Details = () => {
     const handleBeforeMatch = (e: Event) => {
       const target = e.target as HTMLElement | null;
       if (!target) return;
-      if (target.closest('#profile')) setShowAllCVs(true);
       if (target.closest('#expertise')) setAllExpertiseExpanded(true);
       if (target.closest('#mun')) setAllMunExpanded(true);
       if (target.closest('#civic')) setAllCivicExpanded(true);
@@ -109,7 +106,7 @@ const Details = () => {
                 className="profile-portrait"
                 loading="eager"
               />
-              <div style={{ marginTop: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+              <div style={{ marginTop: '1.25rem' }}>
                 <a 
                   href="/cv-collection/Sujal CV ALL.pdf" 
                   target="_blank" 
@@ -123,53 +120,8 @@ const Details = () => {
                   }}
                 >
                   <Download size={14} strokeWidth={1.5} style={{ marginRight: '0.6rem' }} />
-                  Download Master Resume
+                  Download Resume (PDF)
                 </a>
-
-                <button
-                  type="button"
-                  onClick={() => setShowAllCVs(!showAllCVs)}
-                  className="btn-primary"
-                  style={{
-                    padding: '0.55rem 1rem',
-                    width: '100%',
-                    fontSize: '0.72rem',
-                    letterSpacing: '0.08em',
-                    background: 'transparent',
-                    color: 'var(--text-ink)',
-                    border: '1px solid var(--text-ink)'
-                  }}
-                >
-                  {showAllCVs ? 'Hide Tailored Resumes' : 'View Tailored Resumes (5)'}
-                </button>
-
-                <div hidden={!showAllCVs ? ('until-found' as unknown as boolean) : undefined}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginTop: '0.5rem' }}>
-                    {cvData.slice(1).map(cv => (
-                      <a
-                        key={cv.id}
-                        href={`/cv-collection/${cv.filename}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          display: 'flex',
-                          justifyContent: 'space-between',
-                          alignItems: 'center',
-                          padding: '0.55rem 0.75rem',
-                          border: '1px solid #e0dfd5',
-                          background: '#fff',
-                          fontSize: '0.75rem',
-                          color: 'var(--text-ink)',
-                          textDecoration: 'none',
-                          transition: 'border-color 0.2s ease, transform 0.2s ease'
-                        }}
-                      >
-                        <span style={{ fontWeight: 600 }}>{cv.label}</span>
-                        <span style={{ fontSize: '0.65rem', color: 'var(--text-gray)', textTransform: 'uppercase' }}>{cv.category}</span>
-                      </a>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           </div>
