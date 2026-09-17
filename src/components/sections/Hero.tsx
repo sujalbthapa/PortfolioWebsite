@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
               I build software, study geopolitics, and lead service projects—all with a nerdy geek's curiosity.
             </p>
 
-            <div className="hero-cta-wrapper" style={{ marginTop: '2rem', marginBottom: '2.5rem' }}>
+            <div className="hero-cta-wrapper" style={{ marginTop: '1.5rem', marginBottom: '1.25rem' }}>
               <Link to="/details" className="btn-primary hero-cta-btn">
                 Explore Full Portfolio <em>&rarr;</em>
               </Link>

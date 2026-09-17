@@ -1,4 +1,4 @@
-import type { ExperienceItem, ExpertiseItem, CivicItem, CVItem, ProfileData } from '../types';
+import type { ExperienceItem, ExpertiseItem, CivicItem, CVItem, ProfileData, ProjectItem, SkillCategory } from '../types';
 
 export const profileData: ProfileData = {
   greeting: "$ whoami",
@@ -11,6 +11,15 @@ export const profileData: ProfileData = {
 
 export const leadershipData: ExperienceItem[] = [
   {
+    role: "Full Stack Engineer Intern",
+    company: "Fusemachines",
+    date: "Jul 2026 – Present",
+    desc: [
+      "Engineer core application modules across front-end and back-end stacks in a hybrid, production engineering team.",
+      "Collaborate on production workflows, system integration, and API services."
+    ]
+  },
+  {
     role: "Co-Founder & Managing Director",
     company: "Lunar Chronicles Ltd.",
     date: "2025 – Present",
@@ -19,23 +28,23 @@ export const leadershipData: ExperienceItem[] = [
     ]
   },
   {
-    role: "MUN Trainer/Organiser & UI/Web Designer",
+    role: "MUN Trainer & Organizer / UI-UX Designer",
     company: "Youth Thinkers' Society (YTS)",
     date: "2022 – 2026",
     desc: [
-      "Managed training programmes and resources over 3.5 years; coordinated cross-functional teams in large-scale, time-critical event environments."
+      "Trained students and delegates in multilateral diplomacy, negotiation, policy research, and public speaking; co-organized regional conferences.",
+      "Created branding and digital assets for EIMUN and provincial MUN platforms."
     ]
   }
 ];
 
 export const secondaryLeadershipData: ExperienceItem[] = [
   {
-    role: "Leadership & Design Operations",
-    company: "Nepal College of Information Technology",
-    date: "2023 – Present",
+    role: "Web Design & Development Lead",
+    company: "NCIT Tech Fest",
+    date: "2024",
     desc: [
-      "<b>Program Director & Event Co-Lead (HULT Prize):</b> Directed full program lifecycle for one of the world's largest student entrepreneurship competitions; managed 5+ sub-teams.",
-      "<b>Design Team Lead (NCIT Tech Fest):</b> Managed full design workflow from concept to delivery, producing event branding, promotional materials, and digital assets."
+      "Ran the design and web workflow end to end for NCIT's annual tech festival, producing event branding, participant onboarding interfaces, and promotional digital assets."
     ]
   },
   {
@@ -43,7 +52,7 @@ export const secondaryLeadershipData: ExperienceItem[] = [
     company: "Nepal Open Source Klub (NOSK)",
     date: "Feb 2023 – Jan 2026",
     desc: [
-      "Managed end-to-end web lifecycle for 3 major events (SFD 2024, Noskathon Lite, SFD 2025); coordinated distributed contributor teams via GitHub workflows."
+      "Managed end-to-end web development lifecycle for 3 major events (SFD 2024, Noskathon Lite, SFD 2025); coordinated distributed contributor teams via GitHub workflows."
     ]
   },
   {
@@ -51,18 +60,16 @@ export const secondaryLeadershipData: ExperienceItem[] = [
     company: "MUN Society Nepal",
     date: "Sep 2024 – Present",
     desc: [
-      "Oversee digital infrastructure and innovation strategy; coordinate across regional chapters for events, campaigns, and publications."
+      "Oversee digital infrastructure and innovation strategy across regional chapters for events, campaigns, and publications."
     ]
   },
   {
-    role: "Leadership & Event Operations",
-    company: "Trinity International College",
+    role: "Director General & Head of IT",
+    company: "Trinity International MUN (TIMUN 5.0 & 6.0)",
     date: "2021 – 2023",
     desc: [
-      "<b>Director General & Head of IT (TIMUN 5.0 & 6.0):</b> Led full conference operations, managing IT, creative, and content sub-teams.",
-      "<b>President (Performing Arts Troupe):</b> Led planning and execution of large-scale arts events, managing a team of 20+.",
-      "<b>Organizer (SciTech & Management Expo):</b> Coordinated large-scale technical and management exhibitions.",
-      "<b>College Representative (7th Kantipur Hissan Edu-Fair):</b> Provided academic counseling and institutional representation."
+      "Directed conference operations and technology infrastructure for two flagship international MUN conferences.",
+      "Coordinated campus technical exhibitions and represented the institution at regional educational forums."
     ]
   }
 ];
@@ -74,27 +81,22 @@ export const academicData: ExperienceItem[] = [
     date: "Dec 2022 – Dec 2026 (Expected)",
     desc: [
       "A comprehensive engineering program focused on scalable software architecture, distributed systems, and modern web technologies.",
+      "<b>Honors:</b> 1st Place, Final Year Capstone Project Exhibition (SecureScore)",
       "<b>Electives:</b> Cybersecurity • Web Services & Applications • Information System Audit",
-      "<b>Coursework:</b> Software Design & Architecture • Distributed Systems • AI & Neural Networks • Agile Methodologies • Computer Networks • Software Testing & QA • DBMS • Data Structures & Algorithms"
+      "<b>Coursework:</b> Distributed Systems • Software Design & Architecture • Microservices • Agile Methodologies • Computer Networks • DBMS • Data Structures & Algorithms • Software Testing & QA • AI & Neural Networks"
     ]
-  },
-  {
-    role: "Ethical Hacking Certification (Ongoing)",
-    company: "Broadway Infosys",
-    date: "May 2026 – Jul 2026",
-    desc: ["Advanced security protocols and vulnerability assessment."]
-  },
-  {
-    role: "Technical Training — IT/Electronics",
-    company: "Don Bosco Institute (CTEVT)",
-    date: "Apr 2016 – Mar 2019",
-    desc: ["Grade: A"]
   },
   {
     role: "+2 Science (NEB)",
     company: "Trinity International College",
     date: "2020 – 2022",
     desc: ["Comprehensive foundation in physical sciences."]
+  },
+  {
+    role: "Technical Training — IT/Electronics",
+    company: "Don Bosco Institute (CTEVT)",
+    date: "Apr 2016 – Mar 2019",
+    desc: ["Grade: A"]
   },
   {
     role: "Secondary Education (SEE)",
@@ -106,13 +108,29 @@ export const academicData: ExperienceItem[] = [
 
 export const rotaractData: ExperienceItem[] = [
   {
-    role: "International Service Director",
-    company: "Rotaract Central Valley Kasthamandap",
-    date: "Jul 2025 – Present",
+    role: "Zonal Secretary, Zone 8",
+    company: "Rotaract District 3292 (Nepal & Bhutan)",
+    date: "Jul 2026 – Present",
     desc: [
-      "Orchestrating cross-border community welfare projects in collaboration with international clubs, managing multi-lingual communications, and aligning local initiatives with Rotary International’s seven areas of focus.",
-      "Facilitating cultural exchange programs and representing the club in international summits and District conferences.",
-      "Overseeing grant applications for international projects, managing project budgets, and ensuring transparent reporting to District and Global leadership."
+      "Oversee zonal administration, compliance, and inter-club communication for clubs across Zone 8.",
+      "Coordinate reporting channels and align club activities with district initiatives."
+    ]
+  },
+  {
+    role: "Events Coordination Chair",
+    company: "Rotaract Club of Central Valley Kasthamandap",
+    date: "Jul 2026 – Present",
+    desc: [
+      "Direct logistics, vendor coordination, budgeting, and execution for major club-wide events and service operations."
+    ]
+  },
+  {
+    role: "International Service Director | Creative Writer",
+    company: "Rotaract Club of Central Valley Kasthamandap",
+    date: "Jul 2025 – Jun 2026",
+    desc: [
+      "Spearheaded cross-border club twinning initiatives and managed international communication across partner districts.",
+      "Authored impact reports and outreach content; aligned local initiatives with Rotary International’s seven areas of focus."
     ]
   }
 ];
@@ -178,67 +196,22 @@ export const expertiseItems: ExpertiseItem[] = [
 
 export const civicItems: CivicItem[] = [
   {
-    id: 'un-volunteer',
-    category: 'Volunteerism',
-    title: 'Event Volunteer',
-    company: 'UN Volunteers Nepal',
-    date: '2024 – Onwards',
-    shortDesc: 'Assisting in the coordination of the 6th National Level Poetry Event.',
-    desc: 'Provided logistical and operational support for the 6th National Level Poetry Event, ensuring smooth event flow and delegate management in collaboration with UNV Nepal.'
-  },
-  {
-    id: 'nosk',
-    category: 'Open Source',
-    title: 'Open Source Contributor',
-    company: 'Nepal Open Source Klub (NOSK)',
-    date: '2023 – Onwards',
-    shortDesc: 'Advocating for FOSS and contributing to community-driven tech projects.',
-    desc: 'Active contributor to NOSK initiatives, focusing on visual identity and web development for major events like Software Freedom Day (SFD). Coordinated distributed contributor teams via GitHub workflows.'
-  },
-  {
-    id: 'mentorship',
-    category: 'Capacity Building',
-    title: 'Public Speaking & Research Trainer',
-    company: 'Youth Leadership Initiatives',
-    date: '2022 – Onwards',
-    shortDesc: 'Mentoring students in debate, negotiation, and academic documentation.',
-    desc: 'Conducting intensive training sessions on public speaking, structured research, and diplomatic negotiation. Empowering the next generation of student leaders with the tools for effective advocacy and high-level debate.'
-  },
-  {
     id: 'ieee-ncit',
     category: 'Professional Society',
     title: 'PR Coordinator & Web Designer',
     company: 'IEEE NCIT Student Branch',
     date: 'Jan 2025 – Mar 2026',
     shortDesc: 'Managing digital presence and public relations for the student branch.',
-    desc: 'Overseeing the branch\'s web infrastructure, designing promotional assets, and coordinating public relations strategies to enhance member engagement and visibility.'
+    desc: 'Overseeing the branch\'s web infrastructure, designing promotional assets in Figma, and coordinating public relations strategies to enhance member engagement and visibility.'
   },
   {
-    id: 'redcross',
-    category: 'Humanitarian',
-    title: 'Junior Member',
-    company: 'Nepal Red Cross Society',
-    date: 'Feb 2015 – Jul 2017',
-    shortDesc: 'Engaging in disaster relief, first aid, and community health awareness.',
-    desc: 'Participated in community-level health camps, first aid training, and relief distribution programs under the Junior Red Cross Circle.'
-  },
-  {
-    id: 'foz',
-    category: 'Wildlife Conservation',
-    title: 'General Member',
-    company: 'Friends of Zoo (FOZ)',
-    date: 'Mar 2014 – Aug 2017',
-    shortDesc: 'Supporting wildlife conservation and environmental education programs.',
-    desc: 'Engaged in zoo-based conservation activities and educational campaigns to promote biodiversity and environmental stewardship among the youth.'
-  },
-  {
-    id: 'goethe',
-    category: 'International Exchange',
-    title: 'Nepal Representative',
-    company: 'Goethe-Institut International Pash Youth Camp',
-    date: '2019',
-    shortDesc: 'International leadership training and intercultural dialogue.',
-    desc: 'Represented Nepal in multiple Goethe-Institut camps across Sri Lanka and Germany, focusing on sustainable development, language immersion, and global citizenship.'
+    id: 'hult-prize',
+    category: 'Social Entrepreneurship',
+    title: 'Program Director & Event Co-Lead',
+    company: 'Hult Prize at NCIT',
+    date: 'Jul 2024 – Jul 2025',
+    shortDesc: 'Directing cross-team workflows and staging for the campus-wide social entrepreneurship challenge.',
+    desc: 'Directed cross-team workflows and event staging for the campus-wide social entrepreneurship challenge; served as liaison between NCIT and the Hult Prize Foundation.'
   },
   {
     id: 'github',
@@ -246,8 +219,53 @@ export const civicItems: CivicItem[] = [
     title: 'Fielder',
     company: 'GitHub Field Day Nepal',
     date: 'Oct – Nov 2024',
-    shortDesc: 'Engaging with the global developer community and open-source ecosystems.',
-    desc: 'Participating in deep-dive sessions on community building, open-source governance, and leveraging GitHub for large-scale event coordination and documentation.'
+    shortDesc: 'Engaging with open-source collaboration, developer workflows, and GitHub tooling.',
+    desc: 'Participated in hands-on exposure to open-source collaboration, community governance, and developer tooling alongside engineering professionals.'
+  },
+  {
+    id: 'un-volunteer',
+    category: 'Volunteerism',
+    title: 'Event Volunteer',
+    company: 'UN Volunteers Nepal',
+    date: '2024',
+    shortDesc: 'Facilitating coordination for the 6th National Level Poetry Event.',
+    desc: 'Facilitated coordination for the national poetry competition held for International Women\'s Day, managing delegate communications and event logistics.'
+  },
+  {
+    id: 'performing-arts',
+    category: 'Arts & Culture',
+    title: 'President',
+    company: 'Trinity Performing Arts Troupe',
+    date: 'Apr 2021 – Aug 2023',
+    shortDesc: 'Leading team administration and organizing cultural productions and college arts events.',
+    desc: 'Led team administration and organized a range of cultural events, exhibitions, and theatrical productions for the college, managing a multidisciplinary student team.'
+  },
+  {
+    id: 'goethe',
+    category: 'International Exchange',
+    title: 'Youth Delegate',
+    company: 'Goethe-Institut PASCH Youth Camp, Sri Lanka & Nepal',
+    date: '2019',
+    shortDesc: 'Representing Nepal at the international youth camp in Sri Lanka & Nepal.',
+    desc: 'Represented Nepal at the international youth camp in Negombo, Sri Lanka and Godawari, Nepal, engaging in intercultural dialogue and global citizenship workshops.'
+  },
+  {
+    id: 'redcross',
+    category: 'Humanitarian',
+    title: 'Junior Member',
+    company: 'Nepal Red Cross Society',
+    date: 'Feb 2015 – Jul 2017',
+    shortDesc: 'Assisting in blood donation camps, first-aid workshops, and public health awareness.',
+    desc: 'Assisted in community blood donation camps, first-aid workshops, and public health awareness programs under the Junior Red Cross Circle.'
+  },
+  {
+    id: 'foz',
+    category: 'Wildlife Conservation',
+    title: 'General Member',
+    company: 'Friends of Zoo (FOZ)',
+    date: 'Mar 2014 – Aug 2017',
+    shortDesc: 'Supporting wildlife education campaigns, habitat upkeep, and conservation programs.',
+    desc: 'Supported wildlife education campaigns, zoo habitat upkeep, and youth conservation programs promoting biodiversity and environmental stewardship.'
   }
 ];
 
@@ -287,5 +305,66 @@ export const cvData: CVItem[] = [
     label: 'Creative & UI/UX Resume',
     filename: 'Sujal_Thapa_Design_Resume.docx',
     category: 'Design'
+  }
+];
+
+export const featuredProjects: ProjectItem[] = [
+  {
+    id: 'securescore',
+    title: 'SecureScore',
+    award: '1st Place, NCIT Project Exhibition 2026',
+    category: 'Distributed Systems & Privacy-Preserving ML',
+    date: '2025 – 2026',
+    shortDesc: 'Zero-trust banking platform for thin rural infrastructure with federated credit scoring.',
+    desc: 'Engineered a zero-trust banking architecture tailored for resource-constrained rural branches. Features a high-concurrency microservices core (Go/Gin, Apache Kafka, Redis, PostgreSQL) paired with a federated learning plane that trains credit scoring models locally across branches without centralizing sensitive financial data. Decreased rural False Negative Rate (FNR) from 0.328 to ~0.21.',
+    techStack: ['Go', 'Gin', 'Apache Kafka', 'Redis', 'PostgreSQL', 'Federated Learning', 'Python', 'Docker'],
+    collaborators: ['Slok Regmi', 'Laxman Khatri', 'Anisha Adhikari']
+  },
+  {
+    id: 'nosk-events',
+    title: 'Noskathon Lite & Software Freedom Day Platforms',
+    award: 'Web Design & Development Lead',
+    category: 'Full-Stack Web & Brand Identity',
+    date: 'Feb 2023 – Jan 2026',
+    shortDesc: 'Event platforms and participant registration systems for flagship open-source conventions.',
+    desc: 'Spearheaded the complete web lifecycle and visual design identity across 3 major national open-source events (SFD 2024, Noskathon Lite, and SFD 2025). Built performant web applications and coordinated distributed contributor workflows via GitHub.',
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Figma', 'GitHub Actions']
+  },
+  {
+    id: 'ncit-techfest',
+    title: 'NCIT Tech Fest Digital Platform',
+    award: 'Web Design & Development Lead',
+    category: 'Web Design & Operations',
+    date: '2024',
+    shortDesc: 'Event branding and digital registration platform for NCIT\'s annual tech festival.',
+    desc: 'Directed the design workflow end-to-end, delivering event branding, participant onboarding interfaces, schedule matrices, and promotional digital assets.',
+    techStack: ['UI/UX Design', 'React', 'Figma', 'Adobe Creative Suite']
+  }
+];
+
+export const skillsData: SkillCategory[] = [
+  {
+    category: 'Languages',
+    skills: ['JavaScript', 'TypeScript', 'Go (Golang)', 'Python', 'C', 'C++', 'SQL']
+  },
+  {
+    category: 'Front-End',
+    skills: ['React', 'Next.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'Responsive Design', 'Vite']
+  },
+  {
+    category: 'Back-End & Data',
+    skills: ['Node.js', 'Express', 'REST APIs', 'Microservices', 'Kafka', 'PostgreSQL', 'Redis']
+  },
+  {
+    category: 'DevOps & Tools',
+    skills: ['Docker', 'Git & GitHub', 'CI basics', 'Linux', 'VS Code', 'Vercel', 'Netlify']
+  },
+  {
+    category: 'Design & UI/UX',
+    skills: ['Figma', 'Canva', 'Adobe Creative Suite', 'Wireframing', 'Usability Testing', 'Design Systems']
+  },
+  {
+    category: 'Agile & Leadership',
+    skills: ['Scrum', 'Kanban', 'Sprint Planning', 'Jira', 'Trello', 'Cross-functional Leadership', 'Public Speaking']
   }
 ];

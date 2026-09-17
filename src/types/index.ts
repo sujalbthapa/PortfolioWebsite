@@ -36,4 +36,33 @@ export interface CVItem {
   category: string;
 }
 
-export type SectionId = 'home' | 'profile' | 'leadership' | 'expertise' | 'research' | 'mun' | 'rotaract' | 'civic' | 'academic' | 'cv';
+export interface ProjectItem {
+  id: string;
+  title: string;
+  award?: string;
+  category: string;
+  date: string;
+  shortDesc: string;
+  desc: string;
+  techStack: string[];
+  collaborators?: string[];
+  links?: { label: string; url: string }[];
+}
+
+export interface SkillCategory {
+  category: string;
+  skills: string[];
+}
+
+export type SectionId = 
+  | 'home' 
+  | 'profile' 
+  | 'leadership' 
+  | 'skills' 
+  | 'expertise' 
+  | 'research' 
+  | 'mun' 
+  | 'rotaract' 
+  | 'civic' 
+  | 'academic' 
+  | 'cv';

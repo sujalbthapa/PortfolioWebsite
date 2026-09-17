@@ -16,6 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
   const links: { id: SectionId; label: string }[] = [
     { id: 'profile', label: 'Profile' },
     { id: 'leadership', label: 'Leadership' },
+    { id: 'skills', label: 'Toolkit' },
     { id: 'expertise', label: 'Expertise' },
     { id: 'research', label: 'Research' },
     { id: 'mun', label: 'MUN' },
@@ -110,7 +111,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onScroll }) => {
               className={`sidebar-link ${activeSection === link.id ? 'active' : ''}`}
               onClick={() => handleLinkClick(link.id)}
             >
-              <span className="link-number">{links.indexOf(link) + 1}</span>
+              <span className="link-number">{String(links.indexOf(link) + 1).padStart(2, '0')}</span>
               <span className="link-label">{link.label}</span>
             </button>
           ))}
